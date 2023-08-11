@@ -1,22 +1,18 @@
 # Errors
 
-<aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
-</aside>
+The Engage API will return a HTTP 200 response code for all successful requests. You should check the response code to determine the success of each request.
 
-The Kittn API uses the following error codes:
+Some common error responses that you may encounter include:
 
+Code | Name | Description
+---------- | ---------- | ----------
+400 | Bad Request | Your request is invalid, most commonly a validation issue
+401 | Unauthorized | Your authentication is invalid
+403 | Forbidden | You cannot perform that action
+404 | Not Found | The resource that you requested could not be found
+406 | Not Acceptable | Your requested format isn't supported
+429 | Too Many Requests | You have made too many requests in a short period of time [See Rate Limiting](#rate-limiting-coming-soon)
+500 | Internal Server Error | We're having a problem processing your request. Please try again later or contact support if persistent.
+503 | Service Unavailable | We're temporarily offline. Please try again later
 
-Error Code | Meaning
----------- | -------
-400 | Bad Request -- Your request is invalid.
-401 | Unauthorized -- Your API key is wrong.
-403 | Forbidden -- The kitten requested is hidden for administrators only.
-404 | Not Found -- The specified kitten could not be found.
-405 | Method Not Allowed -- You tried to access a kitten with an invalid method.
-406 | Not Acceptable -- You requested a format that isn't json.
-410 | Gone -- The kitten requested has been removed from our servers.
-418 | I'm a teapot.
-429 | Too Many Requests -- You're requesting too many kittens! Slow down!
-500 | Internal Server Error -- We had a problem with our server. Try again later.
-503 | Service Unavailable -- We're temporarily offline for maintenance. Please try again later.
+Most errors will include a JSON body with further details.
