@@ -19,7 +19,11 @@ curl -X POST /api/v1/employees \
      "first_manager_id": "456",
      "employment_terms": "Standard",
      "needs_engage_login": "true",
-     "send_account_activation_email": "false"
+     "send_account_activation_email": "false",
+     "custom_fields": {
+        "remote_worker": "true",
+        "site": null
+     }
   }' 
 ```
 
@@ -43,6 +47,7 @@ second_manager_id | integer | Must match an existing employee id.
 employment_terms | string | Must match existing employment terms.
 needs_engage_login | boolean | Creates an Engage login for the employee, email required.
 send_account_activation_email | boolean | <span class="label label-info">required*</span> Required if needs_engage_login provided.
+custom_fields | string | Key/value pairs of existing custom fields. Key must be snake case.
 
 ## Update an employee
 `PUT /api/v1/employees`
@@ -62,7 +67,11 @@ curl -X PUT /api/v1/employees \
      "start_date": "2023-08-01",
      "end_date": "2023-08-30",
      "first_manager_id": "456",
-     "employment_terms": "Standard"
+     "employment_terms": "Standard",
+     "custom_fields": {
+        "remote_worker": "true",
+        "site": null
+     }
   }' 
 ```
 
@@ -86,6 +95,7 @@ second_manager_id | integer | Must match an existing employee id.
 employment_terms | string | Must match existing employment terms.
 needs_engage_login | boolean | Creates an Engage login for the employee, email required.
 send_account_activation_email | boolean | <span class="label label-info">required*</span> Required if needs_engage_login provided.
+custom_fields | string | Key/value pairs of existing custom fields. Key must be snake case.
 
 ## Employee logins
 
