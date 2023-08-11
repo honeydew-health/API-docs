@@ -5,8 +5,7 @@
 
 ```
 curl -X GET /api/v1/departments \
-  -H "Authorization: Bearer abc" \
-  -H "Content-Type: application/json"
+  -H "Authorization: Bearer abc"
 ```
 
 > Example JSON Response:
@@ -54,16 +53,14 @@ parent_department_external_id | string | Your id of parent department to filter 
 
 ```
 curl -X GET /api/v1/departments/123 \
-  -H "Authorization: Bearer abc" \
-  -H "Content-Type: application/json"
+  -H "Authorization: Bearer abc"
 ```
 
 > Using your Id:
 
 ```
 curl -X GET /api/v1/departments/external_id/abc123 \
-  -H "Authorization: Bearer abc" \
-  -H "Content-Type: application/json"
+  -H "Authorization: Bearer abc"
 ```
 
 > Example JSON Response:

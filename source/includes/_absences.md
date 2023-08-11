@@ -5,8 +5,7 @@
 
 ```
 curl -X GET /api/v1/absences?start_date=2019-04-18 \
-  -H "Authorization: Bearer abc" \
-  -H "Content-Type: application/json"
+  -H "Authorization: Bearer abc"
 ```
 
 > Example JSON Response:

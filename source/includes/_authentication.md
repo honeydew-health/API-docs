@@ -68,7 +68,7 @@ client_secret | integer | <span class="label label-info">required</span> Your AP
 `POST /auth/token/info`
 
 ```
-curl -X POST /auth/token/info -H "Content-Type: application/json" -H "Authorization: [omitted]"
+curl -X POST /auth/token/info -H "Authorization: abc"
 ```
 
 > Example JSON Response:
