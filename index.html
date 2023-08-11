@@ -377,6 +377,31 @@
               </ul>
           </li>
           <li>
+            <a href="#job-titles" class="toc-h1 toc-link" data-title="Job Titles">Job Titles</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create-a-job-title" class="toc-h2 toc-link" data-title="Create a job title">Create a job title</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#departments" class="toc-h1 toc-link" data-title="Departments">Departments</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#list-departments" class="toc-h2 toc-link" data-title="List departments">List departments</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-department" class="toc-h2 toc-link" data-title="Get a department">Get a department</a>
+                  </li>
+                  <li>
+                    <a href="#update-a-department" class="toc-h2 toc-link" data-title="Update a department">Update a department</a>
+                  </li>
+                  <li>
+                    <a href="#retire-a-department" class="toc-h2 toc-link" data-title="Retire a department">Retire a department</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
           </li>
       </ul>
@@ -444,7 +469,7 @@ The token has a lifetime of up to 2 hours, once expired you will need to authent
   }' 
 </code></pre></div>
 <blockquote>
-<p>JSON response example:</p>
+<p>Example JSON Response:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight plaintext"><code>{
      "access_token": "abc",
@@ -485,7 +510,7 @@ The token has a lifetime of up to 2 hours, once expired you will need to authent
 <div class="highlight"><pre class="highlight plaintext"><code>curl -X POST /auth/token/info -H "Content-Type: application/json" -H "Authorization: [omitted]"
 </code></pre></div>
 <blockquote>
-<p>JSON response example:</p>
+<p>Example JSON Response:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight plaintext"><code>{
     "resource_owner_id": null,
@@ -798,6 +823,298 @@ You can view or generate a new API Key on your Engage account under Administrati
 <li>first_manager_id</li>
 <li>second_manager_id</li>
 </ul>
+<h1 id='job-titles'>Job Titles</h1><h2 id='create-a-job-title'>Create a job title</h2>
+<p><code>POST /api/v1/job_titles</code></p>
+<div class="highlight"><pre class="highlight plaintext"><code>curl -X POST /api/v1/job_titles \
+  -H "Authorization: Bearer abc" \
+  -H "Content-Type: application/json" \
+  -d '{
+     "title": "abc"
+  }' 
+</code></pre></div><h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>title</td>
+<td>string</td>
+<td><span class="label label-info">required</span> Unique job title.</td>
+</tr>
+</tbody></table>
+<h1 id='departments'>Departments</h1><h2 id='list-departments'>List departments</h2>
+<p><code>GET /api/v1/departments</code></p>
+<div class="highlight"><pre class="highlight plaintext"><code>curl -X GET /api/v1/departments \
+  -H "Authorization: Bearer abc" \
+  -H "Content-Type: application/json"
+</code></pre></div>
+<blockquote>
+<p>Example JSON Response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>[
+  {
+    "id": "1",
+    "external_id": "abc1",
+    "name": "abc",
+    "parent_department_id": null,
+    "parent_department_external_id": null,
+    "parent_department": null,
+    "created_at": "2022-09-01T14:15:59.000+01:00",
+    "updated_at": "2022-09-01T14:15:59.000+01:00",
+    "retired_at": null
+  },
+  {
+    "id": "2",
+    "external_id": "xyz2",
+    "name": "xyz",
+    "parent_department_id": "1",
+    "parent_department_external_id": "abc1",
+    “parent_department": "abc",
+    "created_at": "2022-09-01T14:15:59.000+01:00",
+    "updated_at": "2022-09-01T14:15:59.000+01:00",
+    "retired_at": null
+  }
+]
+</code></pre></div><h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>parent_department_id</td>
+<td>integer</td>
+<td>Id of parent department to filter by.</td>
+</tr>
+<tr>
+<td>parent_department_external_id</td>
+<td>string</td>
+<td>Your id of parent department to filter by.</td>
+</tr>
+</tbody></table>
+<h2 id='get-a-department'>Get a department</h2>
+<p><code>GET /api/v1/departments/{id}</code></p>
+
+<p><code>GET /api/v1/departments/external_id/{id}</code></p>
+
+<blockquote>
+<p>Using our Id:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>curl -X GET /api/v1/departments/123 \
+  -H "Authorization: Bearer abc" \
+  -H "Content-Type: application/json"
+</code></pre></div>
+<blockquote>
+<p>Using your Id:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>curl -X GET /api/v1/departments/external_id/abc123 \
+  -H "Authorization: Bearer abc" \
+  -H "Content-Type: application/json"
+</code></pre></div>
+<blockquote>
+<p>Example JSON Response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>{
+  "id": "123",
+  "external_id": "abc123",
+  "name": "abc",
+  "parent_department_id": null,
+  "parent_department_external_id": null,
+  "parent_department": null,
+  "created_at": "2022-09-01T14:15:59.000+01:00",
+  "updated_at": "2023-08-01T14:15:59.000+01:00",
+  "retired_at": null
+}
+</code></pre></div><h2 id='update-a-department'>Update a department</h2>
+<p><code>PUT /api/v1/departments/{id}</code></p>
+
+<p><code>PUT /api/v1/departments/external_id/{external_id}</code></p>
+
+<blockquote>
+<p>Using our id:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>curl -X PUT /api/v1/departments/123 \
+  -H "Authorization: Bearer abc" \
+  -H "Content-Type: application/json" \
+  -d '{
+     "name": "abc"
+  }' 
+</code></pre></div>
+<blockquote>
+<p>Using your id:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>curl -X PUT /api/v1/departments/external_id/abc123 \
+  -H "Authorization: Bearer abc" \
+  -H "Content-Type: application/json" \
+  -d '{
+     "name": "abc"
+  }' 
+</code></pre></div>
+<blockquote>
+<p>Example JSON Response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>{
+  "id": "123",
+  "external_id": "abc123",
+  "name": "abc",
+  "parent_department_id": null,
+  "parent_department_external_id": null,
+  "parent_department": null,
+  "created_at": "2022-09-01T14:15:59.000+01:00",
+  "updated_at": "2023-08-01T14:15:59.000+01:00",
+  "retired_at": null
+}
+</code></pre></div><h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td><span class="label label-info">required</span> Unique department name.</td>
+</tr>
+<tr>
+<td>external_id</td>
+<td>string</td>
+<td>Your unique identifier for the department, 25 character max.</td>
+</tr>
+<tr>
+<td>parent_department</td>
+<td>string</td>
+<td>Name of the existing parent department.</td>
+</tr>
+<tr>
+<td>parent_department_id</td>
+<td>string</td>
+<td>Id of the existing parent department.</td>
+</tr>
+<tr>
+<td>parent_department_external_id</td>
+<td>string</td>
+<td>Your unique identifier for the existing parent department.</td>
+</tr>
+</tbody></table>
+
+<aside class="notice notice-info">
+  Provide one of <code>parent_department</code>, <code>parent_department_id</code> or <code>parent_department_external_id</code> to set parent department.
+</aside>
+<h2 id='retire-a-department'>Retire a department</h2>
+<p><code>PUT /api/v1/departments/{id}/retire</code></p>
+
+<p><code>PUT /api/v1/departments/external_id/{external_id}/retire</code></p>
+
+<blockquote>
+<p>Using our id:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>curl -X PUT /api/v1/departments/123/retire \
+  -H "Authorization: Bearer abc" \
+  -H "Content-Type: application/json" \
+  -d '{
+     "retire_at": "2023-08-01",
+     "employee_action": "retire"
+  }' 
+</code></pre></div>
+<blockquote>
+<p>Using your id:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>curl -X PUT /api/v1/departments/external_id/abc123/retire \
+  -H "Authorization: Bearer abc" \
+  -H "Content-Type: application/json" \
+  -d '{
+     "retire_at": "2023-08-01",
+     "employee_action": "transfer",
+     "transfer_department_external_id": "abc123"
+  }' 
+</code></pre></div>
+<blockquote>
+<p>Example JSON Response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>{
+  "id": "123",
+  "external_id": "abc123",
+  "name": "abc",
+  "parent_department_id": null,
+  "parent_department_external_id": null,
+  "parent_department": null,
+  "created_at": "2022-09-01T14:15:59.000+01:00",
+  "updated_at": "2023-08-01T14:15:59.000+01:00",
+  "retired_at": "2023-08-01T00:00:00.000+01:00"
+}
+</code></pre></div><h3 id='parameters-2'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>retire_at</td>
+<td>date</td>
+<td><span class="label label-info">required</span> Must be YYYY-MM-DD format.</td>
+</tr>
+<tr>
+<td>employee_action</td>
+<td>string</td>
+<td><code>retire</code> or <code>transfer</code>. Defaults to <code>retire</code>.</td>
+</tr>
+<tr>
+<td>sub_department_action</td>
+<td>string</td>
+<td><code>retire</code> or <code>promote</code>. Defaults to <code>retire</code>.</td>
+</tr>
+<tr>
+<td>transfer_department_id</td>
+<td>integer</td>
+<td><span class="label label-info">required*</span> Required if employee action = <code>transfer</code> and <code>transfer_department_external_id</code> not provided.</td>
+</tr>
+<tr>
+<td>transfer_department_external_id</td>
+<td>string</td>
+<td><span class="label label-info">required*</span> Required if employee action = <code>transfer</code> and <code>transfer_department_id</code> not provided.</td>
+</tr>
+</tbody></table>
+<h3 id='employee-action'>Employee Action</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>retire</td>
+<td>Employees current role will be ended.</td>
+</tr>
+<tr>
+<td>transfer</td>
+<td>Employees current role will be ended and a new role started at transfer department.</td>
+</tr>
+</tbody></table>
+<h3 id='sub-department-action'>Sub Department Action</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>retire</td>
+<td>Sub departments will be retired.</td>
+</tr>
+<tr>
+<td>promote</td>
+<td>Sub departments will be promoted to level of retiring department.</td>
+</tr>
+</tbody></table>
 <h1 id='errors'>Errors</h1>
 <p>The Engage API will return a HTTP 200 response code for all successful requests. You should check the response code to determine the success of each request.</p>
 
