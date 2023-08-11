@@ -91,7 +91,7 @@ email | string | <span class="label label-info">required*</span> Required if nee
 mobile | string | 
 job_title | string | Must match an existing job title. Reporting by job title must be enabled in company settings if provided. Invalid values ignored. 
 department_name | string | <span class="label label-info">required</span> Must match an existing department name.
-start_date | date | <span class="label label-info">required</span> Must be YYYY-MM-DD format. Employees start date in current role (not overall employment).
+start_date | date | <span class="label label-info">required*</span> Must be YYYY-MM-DD format. Employees start date in current role (not overall employment). Required unless end_date is provided and updating employee to leaver.
 end_date | date | Must be YYYY-MM-DD format. Employees end date in current role. Ignored if new start date is provided.
 first_manager_id | integer | Must match an existing employee id.
 second_manager_id | integer | Must match an existing employee id.
@@ -133,6 +133,10 @@ For companies without SSO enabled, this will send a welcome email to the employe
 
 - end_date
 
+<aside class="notice notice-info">
+  <code>start_date</code> is not required to update an existing employee as a leaver. The provided <code>end_date</code> will be used to end the employees existing role.
+</aside>
+
 ## Transfers
 
 ### Recommended additional minimum values for transfers
@@ -143,5 +147,9 @@ For companies without SSO enabled, this will send a welcome email to the employe
 - second_manager_id
 
 <aside class="notice notice-info">
-  If a new start date is given but department remains the same, the new start date will be ignored and a transfer will not be recorded.
+  If a new <code>start_date</code> is given but <code>department_name</code> remains the same, the new <code>start_date</code> will be ignored and a transfer will not be recorded.
+</aside>
+
+<aside class="notice notice-info">
+  Employees existing role will be ended 1 day before new <code>start_date</code>.
 </aside>
