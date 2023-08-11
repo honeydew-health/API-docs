@@ -537,7 +537,7 @@ The token has a lifetime of up to 2 hours, once expired you will need to authent
 </aside>
 <h2 id='verify-a-token'>Verify a token</h2><h3 id='http-request-2'>HTTP Request</h3>
 <p><code>POST /auth/token/info</code></p>
-<div class="highlight"><pre class="highlight plaintext"><code>curl -X POST /auth/token/info -H "Content-Type: application/json" -H "Authorization: [omitted]"
+<div class="highlight"><pre class="highlight plaintext"><code>curl -X POST /auth/token/info -H "Authorization: abc"
 </code></pre></div>
 <blockquote>
 <p>Example JSON Response:</p>
@@ -878,8 +878,7 @@ You can view or generate a new API Key on your Engage account under Administrati
 <h1 id='departments'>Departments</h1><h2 id='list-departments'>List departments</h2>
 <p><code>GET /api/v1/departments</code></p>
 <div class="highlight"><pre class="highlight plaintext"><code>curl -X GET /api/v1/departments \
-  -H "Authorization: Bearer abc" \
-  -H "Content-Type: application/json"
+  -H "Authorization: Bearer abc"
 </code></pre></div>
 <blockquote>
 <p>Example JSON Response:</p>
@@ -936,15 +935,13 @@ You can view or generate a new API Key on your Engage account under Administrati
 <p>Using our Id:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight plaintext"><code>curl -X GET /api/v1/departments/123 \
-  -H "Authorization: Bearer abc" \
-  -H "Content-Type: application/json"
+  -H "Authorization: Bearer abc"
 </code></pre></div>
 <blockquote>
 <p>Using your Id:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight plaintext"><code>curl -X GET /api/v1/departments/external_id/abc123 \
-  -H "Authorization: Bearer abc" \
-  -H "Content-Type: application/json"
+  -H "Authorization: Bearer abc"
 </code></pre></div>
 <blockquote>
 <p>Example JSON Response:</p>
@@ -1148,8 +1145,7 @@ You can view or generate a new API Key on your Engage account under Administrati
 <h1 id='absences'>Absences</h1><h2 id='list-absences'>List absences</h2>
 <p><code>GET /api/v1/absences</code></p>
 <div class="highlight"><pre class="highlight plaintext"><code>curl -X GET /api/v1/absences?start_date=2019-04-18 \
-  -H "Authorization: Bearer abc" \
-  -H "Content-Type: application/json"
+  -H "Authorization: Bearer abc"
 </code></pre></div>
 <blockquote>
 <p>Example JSON Response:</p>
