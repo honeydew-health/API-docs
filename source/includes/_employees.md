@@ -17,6 +17,7 @@ curl -X POST /api/v1/employees \
      "department_name": "HR",
      "start_date": "2023-08-01",
      "first_manager_id": "456",
+     "employment_terms": "Standard",
      "needs_engage_login": "true",
      "send_account_activation_email": "false"
   }' 
@@ -39,6 +40,7 @@ start_date | date | <span class="label label-info">required</span> Must be YYYY-
 end_date | date | Must be YYYY-MM-DD format. Employees end date in current role.
 first_manager_id | integer | Must match an existing employee id.
 second_manager_id | integer | Must match an existing employee id.
+employment_terms | string | Must match existing employment terms.
 needs_engage_login | boolean | Creates an Engage login for the employee, email required.
 send_account_activation_email | boolean | <span class="label label-info">required*</span> Required if needs_engage_login provided.
 
@@ -59,7 +61,8 @@ curl -X PUT /api/v1/employees \
      "department_name": "HR",
      "start_date": "2023-08-01",
      "end_date": "2023-08-30",
-     "first_manager_id": "456"
+     "first_manager_id": "456",
+     "employment_terms": "Standard"
   }' 
 ```
 
@@ -80,6 +83,7 @@ start_date | date | <span class="label label-info">required</span> Must be YYYY-
 end_date | date | Must be YYYY-MM-DD format. Employees end date in current role. Ignored if new start date is provided.
 first_manager_id | integer | Must match an existing employee id.
 second_manager_id | integer | Must match an existing employee id.
+employment_terms | string | Must match existing employment terms.
 needs_engage_login | boolean | Creates an Engage login for the employee, email required.
 send_account_activation_email | boolean | <span class="label label-info">required*</span> Required if needs_engage_login provided.
 
