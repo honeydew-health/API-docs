@@ -11,6 +11,7 @@ toc_footers:
 includes:
   - rate_limiting
   - authentication
+  - employees
   - errors
 
 search: true
