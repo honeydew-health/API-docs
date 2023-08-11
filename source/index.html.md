@@ -10,6 +10,7 @@ toc_footers:
 
 includes:
   - rate_limiting
+  - authentication
   - errors
 
 search: true
