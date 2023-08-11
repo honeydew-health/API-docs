@@ -1,6 +1,8 @@
-# Rate Limiting (Coming soon)
+# Rate Limiting
 
-To ensure our platform remains stable and available to everyone, the Engage API will be rate- limited.
+<span class="label label-info">Coming soon</span>
+
+To ensure our platform remains stable and available to everyone, the Engage API will be soon be rate-limited.
 We ask developers to use industry standard techniques for limiting calls, caching results and re- trying requests responsibly.
 Calls to our API will be managed by request-based limits, allowing up to 40 requests per minute using a leaky bucket algorithm. You’ll be able to see the current rate using the rate limit header, for example:
 
