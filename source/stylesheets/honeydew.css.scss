@@ -1,7 +1,6 @@
 .label {
   background: #efefef;
   color: #999;
-  float: left;
   font-weight: 700;
   font-size: 70%;
   padding: 2px 4px;
@@ -13,6 +12,10 @@
   text-transform: uppercase;
   font-style: normal;
   white-space: nowrap;
+}
+
+table .label {
+  float: left;
 }
 
 .toc-wrapper {
