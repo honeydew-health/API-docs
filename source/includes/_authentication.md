@@ -10,12 +10,26 @@ The token has a lifetime of up to 2 hours, once expired you will need to authent
   The token returned by our Bearer Token authentication is a valid JWT (JSON Web Token). You can therefore decode and verify the token and its signature - for manual testing check <a href="https://www.jwt.io">www.jwt.io</a>.
 </aside>
 
+## Authorising your requests
+
+After [authenticating and obtaining a token](#obtain-a-token) provide this token with all requests as the following header parameter.
+
+```
+curl /example -H "Authorization: Bearer abc"
+```
+
+### Header Parameters
+
+Parameter | Type | Description
+--------- | ------- | -----------
+Authorization | string | <span class="label label-info">required</span> Bearer abc
+
 ## Obtain a token
 
 ### HTTP Request
 `POST /auth/token`
 
-Authenticate with the API and retrieve a JWT token
+Authenticate with the API and obtain a JWT token
 
 ```
 curl -X POST /auth/token -H "Content-Type: application/json" -d '{
@@ -43,6 +57,10 @@ Parameter | Type | Description
 grant_type | string | <span class="label label-info">required</span> The type of grant requested
 client_id | integer | <span class="label label-info">required</span> Your API Client Application ID
 client_secret | integer | <span class="label label-info">required</span> Your API Client Application Secret
+
+<aside class="notice notice-info">
+  Each token granted will expire in 2 hours.
+</aside>
 
 ## Verify a token
 
@@ -97,7 +115,7 @@ Parameter | Type | Description
 token | string | <span class="label label-info">required</span> Your token
 
 
-## API Key
+## API Keys
 
 <span class="label label-info">Deprecated</span>
 
