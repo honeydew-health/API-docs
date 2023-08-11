@@ -125,7 +125,7 @@ curl -X PUT /api/v1/departments/external_id/abc123 \
 }
 ```
 
-### Parameters
+### JSON Parameters
 
 Name | Type | Description
 --------- | ------- | -----------
@@ -185,7 +185,7 @@ curl -X PUT /api/v1/departments/external_id/abc123/retire \
 }
 ```
 
-### Parameters
+### JSON Parameters
 
 Name | Type | Description
 --------- | ------- | -----------

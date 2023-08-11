@@ -22,7 +22,7 @@ curl -X POST /api/v1/employees \
   }' 
 ```
 
-### Parameters
+### JSON Parameters
 
 Name | Type | Description
 --------- | ------- | -----------
@@ -63,7 +63,7 @@ curl -X PUT /api/v1/employees \
   }' 
 ```
 
-### Parameters
+### JSON Parameters
 
 Name | Type | Description
 --------- | ------- | -----------

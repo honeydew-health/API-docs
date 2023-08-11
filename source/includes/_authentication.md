@@ -50,7 +50,7 @@ curl -X POST /auth/token -H "Content-Type: application/json" -d '{
 }
 ```
 
-### Parameters
+### JSON Parameters
 
 Parameter | Type | Description
 --------- | ------- | -----------
@@ -108,7 +108,7 @@ Name | Type | Description
 --------- | ------- | -----------
 Authorization | string | <span class="label label-info">required</span> Basic HTTP Authentication with your Base64 encoded "client_id:client_secret"
 
-### Parameters
+### JSON Parameters
 
 Name | Type | Description
 --------- | ------- | -----------

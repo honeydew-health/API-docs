@@ -12,7 +12,7 @@ curl -X POST /api/v1/job_titles \
   }' 
 ```
 
-### Parameters
+### JSON Parameters
 
 Name | Type | Description
 --------- | ------- | -----------
