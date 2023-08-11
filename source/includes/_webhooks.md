@@ -175,12 +175,6 @@ After your webhook endpoint is created, Engage sends a `HTTP POST` to your endpo
 
 Your service should ingest the webhook and return a `HTTP 200` response as fast as possible. Any non `HTTP 200` response (including redirects) will be treated as an error response by Engage. A common pattern is to store the payload in a message queue for later processing by a background worker. This reduces the chance of the request timing out, and the webhook delivery counting as a failure.
 
-### Delayed webhooks
-
-In rare circumstances, you might experience delays in receiving webhooks. However, webhooks are always sent with the most recent data about the absence. In other words, if the webhook is delayed and there has been a further change in the absence details in the meantime, you will receive the latest absence data and not the previous state that triggered the webhook originally.
-
-If receiving webhooks up to a day late might cause issues in your app, we recommend comparing the timestamp of the webhook to the current time.
-
 ### Implementing reconciliation jobs
 
 Webhook delivery cannot be guaranteed, therefore we recommend that you implement regular reconciliation tasks to fetch and update data from the Engage API.
