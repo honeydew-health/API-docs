@@ -402,6 +402,14 @@
               </ul>
           </li>
           <li>
+            <a href="#absences" class="toc-h1 toc-link" data-title="Absences">Absences</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#list-absences" class="toc-h2 toc-link" data-title="List absences">List absences</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
           </li>
       </ul>
@@ -1115,6 +1123,80 @@ You can view or generate a new API Key on your Engage account under Administrati
 <td>Sub departments will be promoted to level of retiring department.</td>
 </tr>
 </tbody></table>
+<h1 id='absences'>Absences</h1><h2 id='list-absences'>List absences</h2>
+<p><code>GET /api/v1/absences</code></p>
+<div class="highlight"><pre class="highlight plaintext"><code>curl -X GET /api/v1/absences?start_date=2019-04-18 \
+  -H "Authorization: Bearer abc" \
+  -H "Content-Type: application/json"
+</code></pre></div>
+<blockquote>
+<p>Example JSON Response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>[
+  {
+    "absence_id": "372846",
+    "employee_id": "11223344",
+    "start_date": "2019-04-18",
+    "confirmed_return_date": null,
+    "end_date": null,
+    "created_at": "2019-04-18 18:01:57", 
+    "updated_at": "2019-04-18 18:01:57", 
+    "absence_cause": "Flu",
+    "absence_cause_category": "Infections",
+    "half_day_start": 0,
+    "half_day_end": 1,
+  },
+  {
+    "absence_id": "372847",
+    "employee_id": "11223344",
+    "start_date": "2019-04-18",
+    "confirmed_return_date": "2019-04-19",
+    "end_date": "2019-04-18",
+    "created_at": "2019-04-18 18:01:57",
+    "updated_at": "2019-04-18 18:01:57", 
+    "absence_cause": "Flu",
+    "absence_cause_category": "Infections",
+    "half_day_start": "0",
+    "half_day_end": "0",
+  }
+]
+</code></pre></div><h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>start_date</td>
+<td>date</td>
+<td>Must be YYYY-MM-DD format. Matches equal to or greater than.</td>
+</tr>
+<tr>
+<td>confirmed_return_date</td>
+<td>date</td>
+<td>Must be YYYY-MM-DD format. Matches equal to or greater than.</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>date</td>
+<td>Must be YYYY-MM-DD format. Matches equal to or greater than.</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>date</td>
+<td>Must be YYYY-MM-DD format. Matches equal to or greater than.</td>
+</tr>
+</tbody></table>
+
+<aside class="warning">
+  <strong>At least one</strong> query parameter required.
+</aside>
+
+<aside class="notice notice-info">
+  <code>absence_cause</code> and <code>absence_cause_category</code> only returned if privacy settings allow. See Administration > Preferences > Data API on your Engage Account.
+</aside>
 <h1 id='errors'>Errors</h1>
 <p>The Engage API will return a HTTP 200 response code for all successful requests. You should check the response code to determine the success of each request.</p>
 
