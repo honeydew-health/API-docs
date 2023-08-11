@@ -823,7 +823,7 @@ You can view or generate a new API Key on your Engage account under Administrati
 <tr>
 <td>start_date</td>
 <td>date</td>
-<td><span class="label label-info">required</span> Must be YYYY-MM-DD format. Employees start date in current role (not overall employment).</td>
+<td><span class="label label-info">required*</span> Must be YYYY-MM-DD format. Employees start date in current role (not overall employment). Required unless end_date is provided and updating employee to leaver.</td>
 </tr>
 <tr>
 <td>end_date</td>
@@ -888,6 +888,10 @@ You can view or generate a new API Key on your Engage account under Administrati
 <ul>
 <li>end_date</li>
 </ul>
+
+<aside class="notice notice-info">
+  <code>start_date</code> is not required to update an existing employee as a leaver. The provided <code>end_date</code> will be used to end the employees existing role.
+</aside>
 <h2 id='transfers'>Transfers</h2><h3 id='recommended-additional-minimum-values-for-transfers'>Recommended additional minimum values for transfers</h3>
 <ul>
 <li>start_date</li>
@@ -897,7 +901,11 @@ You can view or generate a new API Key on your Engage account under Administrati
 </ul>
 
 <aside class="notice notice-info">
-  If a new start date is given but department remains the same, the new start date will be ignored and a transfer will not be recorded.
+  If a new <code>start_date</code> is given but <code>department_name</code> remains the same, the new <code>start_date</code> will be ignored and a transfer will not be recorded.
+</aside>
+
+<aside class="notice notice-info">
+  Employees existing role will be ended 1 day before new <code>start_date</code>.
 </aside>
 <h1 id='job-titles'>Job Titles</h1><h2 id='create-a-job-title'>Create a job title</h2>
 <p><code>POST /api/v1/job_titles</code></p>
