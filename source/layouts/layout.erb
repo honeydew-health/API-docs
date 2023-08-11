@@ -51,6 +51,7 @@ under the License.
     </style>
     <%= stylesheet_link_tag :screen, media: :screen %>
     <%= stylesheet_link_tag :print, media: :print %>
+    <%= stylesheet_link_tag :honeydew %>
     <% if current_page.data.search %>
       <%= javascript_include_tag  "all" %>
     <% else %>
@@ -72,7 +73,9 @@ under the License.
       </span>
     </a>
     <div class="toc-wrapper">
+      <div id="logo-wrapper">
         <%= image_tag "logo.png", class: 'logo' %>
+      </div>
       <% if language_tabs.any? %>
         <div class="lang-selector">
           <% language_tabs.each do |lang| %>
