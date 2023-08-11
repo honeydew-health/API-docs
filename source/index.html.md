@@ -14,6 +14,7 @@ includes:
   - employees
   - job_titles
   - departments
+  - absences
   - errors
 
 search: true
