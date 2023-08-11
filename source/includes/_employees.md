@@ -18,6 +18,7 @@ curl -X POST /api/v1/employees \
      "start_date": "2023-08-01",
      "first_manager_id": "456",
      "employment_terms": "Standard",
+     "calendar_name": "Mon-Fri 8hr",
      "needs_engage_login": "true",
      "send_account_activation_email": "false",
      "custom_fields": {
@@ -45,6 +46,7 @@ end_date | date | Must be YYYY-MM-DD format. Employees end date in current role.
 first_manager_id | integer | Must match an existing employee id.
 second_manager_id | integer | Must match an existing employee id.
 employment_terms | string | Must match existing employment terms.
+calendar_name | string | Must match existing calendar name.
 needs_engage_login | boolean | Creates an Engage login for the employee, email required.
 send_account_activation_email | boolean | <span class="label label-info">required*</span> Required if needs_engage_login provided.
 custom_fields | string | Key/value pairs of existing custom fields. Key must be snake case.
@@ -68,6 +70,7 @@ curl -X PUT /api/v1/employees \
      "end_date": "2023-08-30",
      "first_manager_id": "456",
      "employment_terms": "Standard",
+     "calendar_name": "Mon-Fri 8hr",
      "custom_fields": {
         "remote_worker": "true",
         "site": null
@@ -93,6 +96,7 @@ end_date | date | Must be YYYY-MM-DD format. Employees end date in current role.
 first_manager_id | integer | Must match an existing employee id.
 second_manager_id | integer | Must match an existing employee id.
 employment_terms | string | Must match existing employment terms.
+calendar_name | string | Must match existing calendar name.
 needs_engage_login | boolean | Creates an Engage login for the employee, email required.
 send_account_activation_email | boolean | <span class="label label-info">required*</span> Required if needs_engage_login provided.
 custom_fields | string | Key/value pairs of existing custom fields. Key must be snake case.
