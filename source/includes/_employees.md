@@ -141,3 +141,7 @@ For companies without SSO enabled, this will send a welcome email to the employe
 - department_name
 - first_manager_id
 - second_manager_id
+
+<aside class="notice notice-info">
+  If a new start date is given but department remains the same, the new start date will be ignored and a transfer will not be recorded.
+</aside>
