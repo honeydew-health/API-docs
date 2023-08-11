@@ -166,3 +166,33 @@ Authorization | string | Bearer abc (if applicable, [See OAuth 2.0 Bearer Token]
     } 
   }
 ```
+
+## Best Practices
+
+### Receiving webhooks
+
+After your webhook endpoint is created, Engage sends a `HTTP POST` to your endpoint url every time the subscribed events occur. The request body will be a JSON Event object detailing the event and the associated object.
+
+Your service should ingest the webhook and return a `HTTP 200` response as fast as possible. Any non `HTTP 200` response (including redirects) will be treated as an error response by Engage. A common pattern is to store the payload in a message queue for later processing by a background worker. This reduces the chance of the request timing out, and the webhook delivery counting as a failure.
+
+### Delayed webhooks
+
+In rare circumstances, you might experience delays in receiving webhooks. However, webhooks are always sent with the most recent data about the absence. In other words, if the webhook is delayed and there has been a further change in the absence details in the meantime, you will receive the latest absence data and not the previous state that triggered the webhook originally.
+
+If receiving webhooks up to a day late might cause issues in your app, we recommend comparing the timestamp of the webhook to the current time.
+
+### Implementing reconciliation jobs
+
+Webhook delivery cannot be guaranteed, therefore we recommend that you implement regular reconciliation tasks to fetch and update data from the Engage API.
+
+### Frequency of retries
+
+Webhooks have a timeout on HTTP response of 5 seconds - if your service doesn’t return a response within that time, or returns a non `HTTP 200` response Engage will retry the webhook up to 5 times.
+
+The first retry will run 30 seconds later, then 1m 45s, 4m 30s and finally 10 minutes after the initial request.
+
+### Manage webhook API versions
+
+Add logic to your code so that it handles webhooks differently depending on their API version. To check the API version, your app can use the `X-Engage-API-Version` request header in every webhook POST request.
+
+You should select the API version you are using in the Company Preferences DATA API section in Engage.
