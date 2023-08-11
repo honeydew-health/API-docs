@@ -185,7 +185,7 @@ Webhooks have a timeout on HTTP response of 5 seconds - if your service doesn’
 
 The first retry will run 30 seconds later, then 1m 45s, 4m 30s and finally 10 minutes after the initial request at which point it will fail permanently.
 
-### Manage webhook API versions
+### Managing webhook API versions
 
 Add logic to your code so that it handles webhooks differently depending on their API version. To check the API version, your app can use the `X-Engage-API-Version` request header in every webhook POST request.
 
