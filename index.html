@@ -351,6 +351,32 @@
               </ul>
           </li>
           <li>
+            <a href="#employees" class="toc-h1 toc-link" data-title="Employees">Employees</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create-an-employee" class="toc-h2 toc-link" data-title="Create an employee">Create an employee</a>
+                  </li>
+                  <li>
+                    <a href="#update-an-employee" class="toc-h2 toc-link" data-title="Update an employee">Update an employee</a>
+                  </li>
+                  <li>
+                    <a href="#employee-logins" class="toc-h2 toc-link" data-title="Employee logins">Employee logins</a>
+                  </li>
+                  <li>
+                    <a href="#new-starters" class="toc-h2 toc-link" data-title="New starters">New starters</a>
+                  </li>
+                  <li>
+                    <a href="#new-managers" class="toc-h2 toc-link" data-title="New managers">New managers</a>
+                  </li>
+                  <li>
+                    <a href="#leavers" class="toc-h2 toc-link" data-title="Leavers">Leavers</a>
+                  </li>
+                  <li>
+                    <a href="#transfers" class="toc-h2 toc-link" data-title="Transfers">Transfers</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
           </li>
       </ul>
@@ -540,6 +566,238 @@ You can view or generate a new API Key on your Engage account under Administrati
 </aside>
 
 <p>All requests will be validated against a defined list of IP addresses, you can configure these addresses on your Engage account under Administration &gt; Preferences &gt; Data API.</p>
+<h1 id='employees'>Employees</h1><h2 id='create-an-employee'>Create an employee</h2>
+<p><code>POST /api/v1/employees</code></p>
+<div class="highlight"><pre class="highlight plaintext"><code>curl -X POST /api/v1/employees \
+  -H "Authorization: Bearer abc" \
+  -H "Content-Type: application/json" \
+  -d '{
+     "employee_id": "123",
+     "first_name": "Joe",
+     "surname": "Bloggs",
+     "date_of_birth": "1980-04-23",
+     "email": "joe.bloggs@example.com",
+     "job_title": "Administrative Assistant",
+     "department_name": "HR",
+     "start_date": "2023-08-01",
+     "first_manager_id": "456",
+     "needs_engage_login": "true",
+     "send_account_activation_email": "false"
+  }' 
+</code></pre></div><h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>employee_id</td>
+<td>string</td>
+<td><span class="label label-info">required</span> Your unique identifier for the employee.</td>
+</tr>
+<tr>
+<td>first_name</td>
+<td>string</td>
+<td><span class="label label-info">required</span></td>
+</tr>
+<tr>
+<td>middle_name</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>surname</td>
+<td>string</td>
+<td><span class="label label-info">required</span></td>
+</tr>
+<tr>
+<td>date_of_birth</td>
+<td>date</td>
+<td>Must be YYYY-MM-DD format.</td>
+</tr>
+<tr>
+<td>email</td>
+<td>string</td>
+<td><span class="label label-info">required*</span> Required if needs_engage_login true.</td>
+</tr>
+<tr>
+<td>mobile</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>job_title</td>
+<td>string</td>
+<td>Must match an existing job title. Reporting by job title must be enabled in company settings if provided. Invalid values ignored.</td>
+</tr>
+<tr>
+<td>department_name</td>
+<td>string</td>
+<td><span class="label label-info">required</span> Must match an existing department name.</td>
+</tr>
+<tr>
+<td>start_date</td>
+<td>date</td>
+<td><span class="label label-info">required</span> Must be YYYY-MM-DD format. Employees start date in current role (not overall employment).</td>
+</tr>
+<tr>
+<td>end_date</td>
+<td>date</td>
+<td>Must be YYYY-MM-DD format. Employees end date in current role.</td>
+</tr>
+<tr>
+<td>first_manager_id</td>
+<td>integer</td>
+<td>Must match an existing employee id.</td>
+</tr>
+<tr>
+<td>second_manager_id</td>
+<td>integer</td>
+<td>Must match an existing employee id.</td>
+</tr>
+<tr>
+<td>needs_engage_login</td>
+<td>boolean</td>
+<td>Creates an Engage login for the employee, email required.</td>
+</tr>
+<tr>
+<td>send_account_activation_email</td>
+<td>boolean</td>
+<td><span class="label label-info">required*</span> Required if needs_engage_login provided.</td>
+</tr>
+</tbody></table>
+<h2 id='update-an-employee'>Update an employee</h2>
+<p><code>PUT /api/v1/employees</code></p>
+<div class="highlight"><pre class="highlight plaintext"><code>curl -X PUT /api/v1/employees \
+  -H "Authorization: Bearer abc" \
+  -H "Content-Type: application/json" \
+  -d '{
+     "employee_id": "123",
+     "first_name": "Joe",
+     "surname": "Bloggs",
+     "date_of_birth": "1980-04-23",
+     "email": "joe.bloggs@example.com",
+     "job_title": "Administrative Assistant",
+     "department_name": "HR",
+     "start_date": "2023-08-01",
+     "end_date": "2023-08-30",
+     "first_manager_id": "456"
+  }' 
+</code></pre></div><h3 id='parameters-2'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>employee_id</td>
+<td>string</td>
+<td><span class="label label-info">required</span> Your unique identifier for the employee.</td>
+</tr>
+<tr>
+<td>first_name</td>
+<td>string</td>
+<td><span class="label label-info">required</span></td>
+</tr>
+<tr>
+<td>middle_name</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>surname</td>
+<td>string</td>
+<td><span class="label label-info">required</span></td>
+</tr>
+<tr>
+<td>date_of_birth</td>
+<td>date</td>
+<td>Must be YYYY-MM-DD format.</td>
+</tr>
+<tr>
+<td>email</td>
+<td>string</td>
+<td><span class="label label-info">required*</span> Required if needs_engage_login true.</td>
+</tr>
+<tr>
+<td>mobile</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>job_title</td>
+<td>string</td>
+<td>Must match an existing job title. Reporting by job title must be enabled in company settings if provided. Invalid values ignored.</td>
+</tr>
+<tr>
+<td>department_name</td>
+<td>string</td>
+<td><span class="label label-info">required</span> Must match an existing department name.</td>
+</tr>
+<tr>
+<td>start_date</td>
+<td>date</td>
+<td><span class="label label-info">required</span> Must be YYYY-MM-DD format. Employees start date in current role (not overall employment).</td>
+</tr>
+<tr>
+<td>end_date</td>
+<td>date</td>
+<td>Must be YYYY-MM-DD format. Employees end date in current role. Ignored if new start date is provided.</td>
+</tr>
+<tr>
+<td>first_manager_id</td>
+<td>integer</td>
+<td>Must match an existing employee id.</td>
+</tr>
+<tr>
+<td>second_manager_id</td>
+<td>integer</td>
+<td>Must match an existing employee id.</td>
+</tr>
+<tr>
+<td>needs_engage_login</td>
+<td>boolean</td>
+<td>Creates an Engage login for the employee, email required.</td>
+</tr>
+<tr>
+<td>send_account_activation_email</td>
+<td>boolean</td>
+<td><span class="label label-info">required*</span> Required if needs_engage_login provided.</td>
+</tr>
+</tbody></table>
+<h2 id='employee-logins'>Employee logins</h2>
+<p>If you need for the employee to login to Engage, you can provide the <code>needs_engage_login</code> and <code>send_account_activation_email</code> fields to provision their user account. By default the employee will not be able to login.</p>
+<h3 id='send_account_activation_email'>send_account_activation_email</h3>
+<p>For companies with SSO enabled, this will send a welcome email to the employee advising them that they can now login with their company email.</p>
+
+<p>For companies without SSO enabled, this will send a welcome email to the employee with a secure link from which they can set their password and login.</p>
+<h2 id='new-starters'>New starters</h2><h3 id='recommended-additional-minimum-values-for-new-starters'>Recommended additional minimum values for new starters</h3>
+<ul>
+<li>first_manager_id</li>
+<li>second_manager_id</li>
+</ul>
+<h2 id='new-managers'>New managers</h2><h3 id='recommended-additional-minimum-values-for-new-managers'>Recommended additional minimum values for new managers</h3>
+<ul>
+<li>email</li>
+<li>mobile</li>
+<li>first_manager_id</li>
+<li>second_manager_id</li>
+</ul>
+<h2 id='leavers'>Leavers</h2><h3 id='recommended-additional-minimum-values-for-leavers'>Recommended additional minimum values for leavers</h3>
+<ul>
+<li>end_date</li>
+</ul>
+<h2 id='transfers'>Transfers</h2><h3 id='recommended-additional-minimum-values-for-transfers'>Recommended additional minimum values for transfers</h3>
+<ul>
+<li>start_date</li>
+<li>department_name</li>
+<li>first_manager_id</li>
+<li>second_manager_id</li>
+</ul>
 <h1 id='errors'>Errors</h1>
 <p>The Engage API will return a HTTP 200 response code for all successful requests. You should check the response code to determine the success of each request.</p>
 
