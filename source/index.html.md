@@ -13,6 +13,7 @@ includes:
   - authentication
   - employees
   - job_titles
+  - departments
   - errors
 
 search: true

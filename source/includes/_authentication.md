@@ -39,7 +39,7 @@ curl -X POST /auth/token -H "Content-Type: application/json" -d '{
   }' 
 ```
 
-> JSON response example:
+> Example JSON Response:
 
 ```
 {
@@ -71,7 +71,7 @@ client_secret | integer | <span class="label label-info">required</span> Your AP
 curl -X POST /auth/token/info -H "Content-Type: application/json" -H "Authorization: [omitted]"
 ```
 
-> JSON response example:
+> Example JSON Response:
 
 ```
 {
