@@ -87,7 +87,7 @@ curl -X POST /auth/token/info -H "Content-Type: application/json" -H "Authorizat
 
 ### Header Parameters
 
-Parameter | Type | Description
+Name | Type | Description
 --------- | ------- | -----------
 Authorization | string | <span class="label label-info">required</span> Your authorization token
 
@@ -104,13 +104,13 @@ curl -X POST /auth/revoke -H "Content-Type: application/json" -H "Authorization:
 
 ### Header Parameters
 
-Parameter | Type | Description
+Name | Type | Description
 --------- | ------- | -----------
 Authorization | string | <span class="label label-info">required</span> Basic HTTP Authentication with your Base64 encoded "client_id:client_secret"
 
 ### Parameters
 
-Parameter | Type | Description
+Name | Type | Description
 --------- | ------- | -----------
 token | string | <span class="label label-info">required</span> Your token
 
