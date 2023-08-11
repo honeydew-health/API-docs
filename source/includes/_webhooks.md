@@ -183,7 +183,7 @@ Webhook delivery cannot be guaranteed, therefore we recommend that you implement
 
 Webhooks have a timeout on HTTP response of 5 seconds - if your service doesn’t return a response within that time, or returns a non `HTTP 200` response Engage will retry the webhook up to 5 times.
 
-The first retry will run 30 seconds later, then 1m 45s, 4m 30s and finally 10 minutes after the initial request.
+The first retry will run 30 seconds later, then 1m 45s, 4m 30s and finally 10 minutes after the initial request at which point it will fail permanently.
 
 ### Manage webhook API versions
 
