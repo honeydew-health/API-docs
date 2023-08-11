@@ -288,7 +288,7 @@
     </style>
     <link href="stylesheets/screen-c9d8fa83.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print-953e3353.css" rel="stylesheet" media="print" />
-    <link href="stylesheets/honeydew-f547ca63.css" rel="stylesheet" />
+    <link href="stylesheets/honeydew-02494863.css" rel="stylesheet" />
       <script src="javascripts/all-b12a2749.js"></script>
 
     <script>
@@ -429,6 +429,9 @@
                   </li>
                   <li>
                     <a href="#deleted-absence" class="toc-h2 toc-link" data-title="Deleted Absence">Deleted Absence</a>
+                  </li>
+                  <li>
+                    <a href="#best-practices" class="toc-h2 toc-link" data-title="Best Practices">Best Practices</a>
                   </li>
               </ul>
           </li>
@@ -1506,7 +1509,25 @@ You can view or generate a new API Key on your Engage account under Administrati
       "id": 123
     } 
   }
-</code></pre></div>
+</code></pre></div><h2 id='best-practices'>Best Practices</h2><h3 id='receiving-webhooks'>Receiving webhooks</h3>
+<p>After your webhook endpoint is created, Engage sends a <code>HTTP POST</code> to your endpoint url every time the subscribed events occur. The request body will be a JSON Event object detailing the event and the associated object.</p>
+
+<p>Your service should ingest the webhook and return a <code>HTTP 200</code> response as fast as possible. Any non <code>HTTP 200</code> response (including redirects) will be treated as an error response by Engage. A common pattern is to store the payload in a message queue for later processing by a background worker. This reduces the chance of the request timing out, and the webhook delivery counting as a failure.</p>
+<h3 id='delayed-webhooks'> Delayed webhooks</h3>
+<p>In rare circumstances, you might experience delays in receiving webhooks. However, webhooks are always sent with the most recent data about the absence. In other words, if the webhook is delayed and there has been a further change in the absence details in the meantime, you will receive the latest absence data and not the previous state that triggered the webhook originally.</p>
+
+<p>If receiving webhooks up to a day late might cause issues in your app, we recommend comparing the timestamp of the webhook to the current time.</p>
+<h3 id='implementing-reconciliation-jobs'>Implementing reconciliation jobs</h3>
+<p>Webhook delivery cannot be guaranteed, therefore we recommend that you implement regular reconciliation tasks to fetch and update data from the Engage API.</p>
+<h3 id='frequency-of-retries'>Frequency of retries</h3>
+<p>Webhooks have a timeout on HTTP response of 5 seconds - if your service doesn’t return a response within that time, or returns a non <code>HTTP 200</code> response Engage will retry the webhook up to 5 times.</p>
+
+<p>The first retry will run 30 seconds later, then 1m 45s, 4m 30s and finally 10 minutes after the initial request.</p>
+<h3 id='manage-webhook-api-versions'>Manage webhook API versions</h3>
+<p>Add logic to your code so that it handles webhooks differently depending on their API version. To check the API version, your app can use the <code>X-Engage-API-Version</code> request header in every webhook POST request.</p>
+
+<p>You should select the API version you are using in the Company Preferences DATA API section in Engage.</p>
+
       </div>
       <div class="dark-box">
           <div class="lang-selector">
