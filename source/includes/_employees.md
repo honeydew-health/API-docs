@@ -153,3 +153,7 @@ For companies without SSO enabled, this will send a welcome email to the employe
 <aside class="notice notice-info">
   Employees existing role will be ended 1 day before new <code>start_date</code>.
 </aside>
+
+<aside class="warning">
+  Do not include an <code>end_date</code> for transferring active employees. Providing an <code>end_date</code> will process the employee as a leaver instead.
+</aside>
