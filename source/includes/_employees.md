@@ -22,8 +22,10 @@ curl -X POST /api/v1/employees \
      "needs_engage_login": "true",
      "send_account_activation_email": "false",
      "custom_fields": {
-        "remote_worker": "true",
-        "site": null
+        "pay_group": "PG001",
+        "sick_pay_policy": "SSP",
+        "country": "Scotland",
+        "secondary_employee_id": "38475"
      }
   }' 
 ```
@@ -72,8 +74,10 @@ curl -X PUT /api/v1/employees \
      "employment_terms": "Standard",
      "calendar_name": "Mon-Fri 8hr",
      "custom_fields": {
-        "remote_worker": "true",
-        "site": null
+        "pay_group": "PG001",
+        "sick_pay_policy": "SSP",
+        "country": "Scotland",
+        "secondary_employee_id": "38475"
      }
   }' 
 ```
