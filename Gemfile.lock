@@ -34,6 +34,7 @@ GEM
       concurrent-ruby (~> 1.0)
     kramdown (2.3.1)
       rexml
+    libv8-node (18.19.0.0)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -81,6 +82,8 @@ GEM
       middleman-core (>= 3.2)
       rouge (~> 3.2)
     mini_portile2 (2.8.0)
+    mini_racer (0.16.0)
+      libv8-node (~> 18.19.0.0)
     minitest (5.14.4)
     nokogiri (1.13.4)
       mini_portile2 (~> 2.8.0)
@@ -128,10 +131,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  execjs
   middleman (~> 4.4)
   middleman-autoprefixer (~> 3.0)
   middleman-sprockets (~> 4.1)
   middleman-syntax (~> 3.2)
+  mini_racer
   nokogiri (~> 1.13.3)
   redcarpet (~> 3.5.0)
   rouge (~> 3.21)
