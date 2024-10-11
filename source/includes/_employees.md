@@ -43,6 +43,8 @@ email | string | <span class="label label-info">required*</span> Required if nee
 mobile | string | 
 job_title | string | Must match an existing job title. Reporting by job title must be enabled in company settings if provided. Invalid values ignored. 
 department_name | string | <span class="label label-info">required</span> Must match an existing department name.
+department_id | integer | Must match an existing department id. Can be used instead of department_name.
+external_id | string | Must match an existing department external_id. Can be used instead of department_name.
 start_date | date | <span class="label label-info">required</span> Must be YYYY-MM-DD format. Employees start date in current role (not overall employment).
 end_date | date | Must be YYYY-MM-DD format. Employees end date in current role.
 first_manager_id | integer | Must match an existing employee id.
@@ -95,6 +97,8 @@ email | string | <span class="label label-info">required*</span> Required if nee
 mobile | string | 
 job_title | string | Must match an existing job title. Reporting by job title must be enabled in company settings if provided. Invalid values ignored. 
 department_name | string | <span class="label label-info">required</span> Must match an existing department name.
+department_id | integer | Must match an existing department id. Can be used instead of department_name.
+external_id | string | Must match an existing department external_id. Can be used instead of department_name.
 start_date | date | <span class="label label-info">required*</span> Must be YYYY-MM-DD format. Employees start date in current role (not overall employment). Required unless end_date is provided and updating employee to leaver.
 end_date | date | Must be YYYY-MM-DD format. Employees end date in current role. Ignored if new start date is provided.
 first_manager_id | integer | Must match an existing employee id.
