@@ -698,7 +698,17 @@ You can view or generate a new API Key on your Engage account under Administrati
 <tr>
 <td>department_name</td>
 <td>string</td>
-<td><span class="label label-info">required</span> Must match an existing department name.</td>
+<td>Must match an existing department name.</td>
+</tr>
+<tr>
+<td>department_id</td>
+<td>integer</td>
+<td>Must match an existing department id.</td>
+</tr>
+<tr>
+<td>department_external_id</td>
+<td>string</td>
+<td>Must match an existing department external_id.</td>
 </tr>
 <tr>
 <td>start_date</td>
@@ -746,6 +756,10 @@ You can view or generate a new API Key on your Engage account under Administrati
 <td>Key/value pairs of existing custom fields. Key must be snake case.</td>
 </tr>
 </tbody></table>
+
+<aside class="notice notice-info">
+  Provide one of <code>department_name</code>, <code>department_id</code> or <code>department_external_id</code> to set department.
+</aside>
 <h2 id='update-an-employee'>Update an employee</h2>
 <p><code>PUT /api/v1/employees</code></p>
 <div class="highlight"><pre class="highlight plaintext"><code>curl -X PUT /api/v1/employees \
@@ -822,7 +836,17 @@ You can view or generate a new API Key on your Engage account under Administrati
 <tr>
 <td>department_name</td>
 <td>string</td>
-<td><span class="label label-info">required</span> Must match an existing department name.</td>
+<td>Must match an existing department name.</td>
+</tr>
+<tr>
+<td>department_id</td>
+<td>integer</td>
+<td>Must match an existing department id. Can be used instead of department_name.</td>
+</tr>
+<tr>
+<td>department_external_id</td>
+<td>string</td>
+<td>Must match an existing department external_id. Can be used instead of department_name.</td>
 </tr>
 <tr>
 <td>start_date</td>
@@ -870,6 +894,10 @@ You can view or generate a new API Key on your Engage account under Administrati
 <td>Key/value pairs of existing custom fields. Key must be snake case.</td>
 </tr>
 </tbody></table>
+
+<aside class="notice notice-info">
+  Provide one of <code>department_name</code>, <code>department_id</code> or <code>department_external_id</code> to set department.
+</aside>
 <h2 id='employee-logins'>Employee logins</h2>
 <p>If you need for the employee to login to Engage, you can provide the <code>needs_engage_login</code> and <code>send_account_activation_email</code> fields to provision their user account. By default the employee will not be able to login.</p>
 <h3 id='send_account_activation_email'>send_account_activation_email</h3>
