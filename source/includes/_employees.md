@@ -42,7 +42,9 @@ date_of_birth | date | Must be YYYY-MM-DD format.
 email | string | <span class="label label-info">required*</span> Required if needs_engage_login true.
 mobile | string | 
 job_title | string | Must match an existing job title. Reporting by job title must be enabled in company settings if provided. Invalid values ignored. 
-department_name | string | <span class="label label-info">required</span> Must match an existing department name.
+department_name | string | Must match an existing department name.
+department_id | integer | Must match an existing department id.
+department_external_id | string | Must match an existing department external_id.
 start_date | date | <span class="label label-info">required</span> Must be YYYY-MM-DD format. Employees start date in current role (not overall employment).
 end_date | date | Must be YYYY-MM-DD format. Employees end date in current role.
 first_manager_id | integer | Must match an existing employee id.
@@ -52,6 +54,10 @@ calendar_name | string | Must match existing calendar name.
 needs_engage_login | boolean | Creates an Engage login for the employee, email required.
 send_account_activation_email | boolean | <span class="label label-info">required*</span> Required if needs_engage_login provided.
 custom_fields | string | Key/value pairs of existing custom fields. Key must be snake case.
+
+<aside class="notice notice-info">
+  Provide one of <code>department_name</code>, <code>department_id</code> or <code>department_external_id</code> to set department.
+</aside>
 
 ## Update an employee
 `PUT /api/v1/employees`
@@ -94,7 +100,9 @@ date_of_birth | date | Must be YYYY-MM-DD format.
 email | string | <span class="label label-info">required*</span> Required if needs_engage_login true.
 mobile | string | 
 job_title | string | Must match an existing job title. Reporting by job title must be enabled in company settings if provided. Invalid values ignored. 
-department_name | string | <span class="label label-info">required</span> Must match an existing department name.
+department_name | string | Must match an existing department name.
+department_id | integer | Must match an existing department id. Can be used instead of department_name.
+department_external_id | string | Must match an existing department external_id. Can be used instead of department_name.
 start_date | date | <span class="label label-info">required*</span> Must be YYYY-MM-DD format. Employees start date in current role (not overall employment). Required unless end_date is provided and updating employee to leaver.
 end_date | date | Must be YYYY-MM-DD format. Employees end date in current role. Ignored if new start date is provided.
 first_manager_id | integer | Must match an existing employee id.
@@ -104,6 +112,10 @@ calendar_name | string | Must match existing calendar name.
 needs_engage_login | boolean | Creates an Engage login for the employee, email required.
 send_account_activation_email | boolean | <span class="label label-info">required*</span> Required if needs_engage_login provided.
 custom_fields | string | Key/value pairs of existing custom fields. Key must be snake case.
+
+<aside class="notice notice-info">
+  Provide one of <code>department_name</code>, <code>department_id</code> or <code>department_external_id</code> to set department.
+</aside>
 
 ## Employee logins
 
