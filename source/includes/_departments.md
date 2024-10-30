@@ -79,6 +79,38 @@ curl -X GET /api/v1/departments/external_id/abc123 \
 }
 ```
 
+## Create a department
+`POST /api/v1/departments/`
+
+```
+curl -X POST /api/v1/departments \
+  -H "Authorization: Bearer abc" \
+  -H "Content-Type: application/json" \
+  -d '{
+      "name": "abc",
+      "external_id": "abc123",
+      "parent_department_id": null,
+      "parent_department_external_id": null,
+      "parent_department": null,
+     }'
+```
+
+### JSON Parameters
+
+Name | Type | Description
+--------- | ------- | -----------
+name | string | <span class="label label-info">required</span> Unique department name.
+external_id | string | Your unique identifier for the department, 25 character max.
+parent_department | string | Name of the existing parent department.
+parent_department_id | string | Id of the existing parent department.
+parent_department_external_id | string | Your unique identifier for the existing parent department.
+
+<aside class="notice notice-info">
+  Provide one of <code>parent_department</code>, <code>parent_department_id</code> or <code>parent_department_external_id</code> to set parent department.
+</aside>
+
+
+
 ## Update a department
 `PUT /api/v1/departments/{id}`
 
