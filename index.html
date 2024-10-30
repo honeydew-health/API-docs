@@ -394,6 +394,9 @@
                     <a href="#get-a-department" class="toc-h2 toc-link" data-title="Get a department">Get a department</a>
                   </li>
                   <li>
+                    <a href="#create-a-department" class="toc-h2 toc-link" data-title="Create a department">Create a department</a>
+                  </li>
+                  <li>
                     <a href="#update-a-department" class="toc-h2 toc-link" data-title="Update a department">Update a department</a>
                   </li>
                   <li>
@@ -1047,7 +1050,57 @@ You can view or generate a new API Key on your Engage account under Administrati
   "updated_at": "2023-08-01T14:15:59.000+01:00",
   "retired_at": null
 }
-</code></pre></div><h2 id='update-a-department'>Update a department</h2>
+</code></pre></div><h2 id='create-a-department'>Create a department</h2>
+<p><code>POST /api/v1/departments/</code></p>
+<div class="highlight"><pre class="highlight plaintext"><code>curl -X POST /api/v1/departments \
+  -H "Authorization: Bearer abc" \
+  -H "Content-Type: application/json" \
+  -d '{
+      "name": "abc",
+      "external_id": "abc123",
+      "parent_department_id": null,
+      "parent_department_external_id": null,
+      "parent_department": null,
+     }'
+</code></pre></div><h3 id='json-parameters'>JSON Parameters</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td><span class="label label-info">required</span> Unique department name.</td>
+</tr>
+<tr>
+<td>external_id</td>
+<td>string</td>
+<td>Your unique identifier for the department, 25 character max.</td>
+</tr>
+<tr>
+<td>parent_department</td>
+<td>string</td>
+<td>Name of the existing parent department.</td>
+</tr>
+<tr>
+<td>parent_department_id</td>
+<td>string</td>
+<td>Id of the existing parent department.</td>
+</tr>
+<tr>
+<td>parent_department_external_id</td>
+<td>string</td>
+<td>Your unique identifier for the existing parent department.</td>
+</tr>
+</tbody></table>
+
+<aside class="notice notice-info">
+  Provide one of <code>parent_department</code>, <code>parent_department_id</code> or <code>parent_department_external_id</code> to set parent department.
+</aside>
+<h2 id='update-a-department'>Update a department</h2>
 <p><code>PUT /api/v1/departments/{id}</code></p>
 
 <p><code>PUT /api/v1/departments/external_id/{external_id}</code></p>
@@ -1086,7 +1139,7 @@ You can view or generate a new API Key on your Engage account under Administrati
   "updated_at": "2023-08-01T14:15:59.000+01:00",
   "retired_at": null
 }
-</code></pre></div><h3 id='json-parameters'>JSON Parameters</h3>
+</code></pre></div><h3 id='json-parameters-2'>JSON Parameters</h3>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -1166,7 +1219,7 @@ You can view or generate a new API Key on your Engage account under Administrati
   "updated_at": "2023-08-01T14:15:59.000+01:00",
   "retired_at": "2023-08-01T00:00:00.000+01:00"
 }
-</code></pre></div><h3 id='json-parameters-2'>JSON Parameters</h3>
+</code></pre></div><h3 id='json-parameters-3'>JSON Parameters</h3>
 <table><thead>
 <tr>
 <th>Name</th>
