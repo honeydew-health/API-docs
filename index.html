@@ -839,17 +839,17 @@ You can view or generate a new API Key on your Engage account under Administrati
 <tr>
 <td>department_name</td>
 <td>string</td>
-<td>Must match an existing department name.</td>
+<td><span class="label label-info">required*</span> Must match an existing department name. Must provide one of department_id, department_name or department_external_id.</td>
 </tr>
 <tr>
 <td>department_id</td>
 <td>integer</td>
-<td>Must match an existing department id. Can be used instead of department_name.</td>
+<td><span class="label label-info">required*</span> Must match an existing department id. Must provide one of department_id, department_name or department_external_id.</td>
 </tr>
 <tr>
 <td>department_external_id</td>
 <td>string</td>
-<td>Must match an existing department external_id. Can be used instead of department_name.</td>
+<td><span class="label label-info">required*</span> Must match an existing department external_id. Must provide one of department_id, department_name or department_external_id.</td>
 </tr>
 <tr>
 <td>start_date</td>
