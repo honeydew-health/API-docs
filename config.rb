@@ -61,5 +61,3 @@ set :port, 4567
 helpers do
   require './lib/toc_data.rb'
 end
-
-MiniRacer::Platform.set_flags! :single_threaded
