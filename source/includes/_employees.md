@@ -1,5 +1,59 @@
 # Employees
 
+## Get an employee
+`GET /api/v1/employees/{employee_id}`
+
+```
+curl -X GET /api/v1/employees/123 \
+  -H "Authorization: Bearer abc"
+```
+
+> Example JSON Response:
+
+```
+{
+  "employee_id": "123",
+  "first_name": "Joe",
+  "surname": "Bloggs",
+  "date_of_birth": "1980-04-23",
+  "email": "joe.bloggs@example.com",
+  "job_title": "Administrative Assistant",
+  "department_name": "HR",
+  "start_date": "2023-08-01",
+  "first_manager_id": "456",
+  "employment_terms": "Standard",
+  "calendar_name": "Mon-Fri 8hr",
+  "custom_fields": {
+    "pay_group": "PG001",
+    "sick_pay_policy": "SSP",
+    "country": "Scotland",
+    "secondary_employee_id": "38475"
+  }
+}
+```
+
+## Check if an employee exists
+`GET /api/v1/employees/exists`
+
+### Query Parameters
+
+Name | Type | Description
+--------- | ------- | -----------
+employee_id | string | Id of employee to search for.
+
+```
+curl -X GET /api/v1/employees/exists?employee_id=123 \
+  -H "Authorization: Bearer abc"
+```
+
+> Example JSON Response:
+
+```
+{
+  "exists": true
+}
+```
+
 ## Create an employee
 `POST /api/v1/employees`
 
@@ -116,6 +170,24 @@ custom_fields | string | Key/value pairs of existing custom fields. Key must be 
 <aside class="notice notice-info">
   Provide one of <code>department_name</code>, <code>department_id</code> or <code>department_external_id</code> to set department.
 </aside>
+
+## Retire an employee
+`PUT /api/v1/employees/{employee_id}/retire`
+
+### JSON Parameters
+
+Name | Type | Description
+--------- | ------- | -----------
+end_date | date | Date to end the employees current role on
+
+```
+curl -X PUT /api/v1/employees/{employee_id}/retire \
+  -H "Authorization: Bearer abc" \
+  -H "Content-Type: application/json" \
+  -d '{
+     "ends_at": "2025-01-30"
+  }' 
+```
 
 ## Employee logins
 
