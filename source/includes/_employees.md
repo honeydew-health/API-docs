@@ -185,7 +185,7 @@ curl -X PUT /api/v1/employees/{employee_id}/retire \
   -H "Authorization: Bearer abc" \
   -H "Content-Type: application/json" \
   -d '{
-     "ends_at": "2025-01-30"
+     "end_date": "2025-01-30"
   }' 
 ```
 
