@@ -286,8 +286,8 @@
   color: #859900;
 }
     </style>
-    <link href="stylesheets/screen-c9d8fa83.css" rel="stylesheet" media="screen" />
-    <link href="stylesheets/print-953e3353.css" rel="stylesheet" media="print" />
+    <link href="stylesheets/screen-87841294.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-966d6edc.css" rel="stylesheet" media="print" />
     <link href="stylesheets/honeydew-02494863.css" rel="stylesheet" />
       <script src="javascripts/all-b12a2749.js"></script>
 
@@ -354,10 +354,19 @@
             <a href="#employees" class="toc-h1 toc-link" data-title="Employees">Employees</a>
               <ul class="toc-list-h2">
                   <li>
+                    <a href="#get-an-employee" class="toc-h2 toc-link" data-title="Get an employee">Get an employee</a>
+                  </li>
+                  <li>
+                    <a href="#check-if-an-employee-exists" class="toc-h2 toc-link" data-title="Check if an employee exists">Check if an employee exists</a>
+                  </li>
+                  <li>
                     <a href="#create-an-employee" class="toc-h2 toc-link" data-title="Create an employee">Create an employee</a>
                   </li>
                   <li>
                     <a href="#update-an-employee" class="toc-h2 toc-link" data-title="Update an employee">Update an employee</a>
+                  </li>
+                  <li>
+                    <a href="#retire-an-employee" class="toc-h2 toc-link" data-title="Retire an employee">Retire an employee</a>
                   </li>
                   <li>
                     <a href="#employee-logins" class="toc-h2 toc-link" data-title="Employee logins">Employee logins</a>
@@ -392,6 +401,9 @@
                   </li>
                   <li>
                     <a href="#get-a-department" class="toc-h2 toc-link" data-title="Get a department">Get a department</a>
+                  </li>
+                  <li>
+                    <a href="#check-if-a-department-exists" class="toc-h2 toc-link" data-title="Check if a department exists">Check if a department exists</a>
                   </li>
                   <li>
                     <a href="#create-a-department" class="toc-h2 toc-link" data-title="Create a department">Create a department</a>
@@ -624,7 +636,59 @@ You can view or generate a new API Key on your Engage account under Administrati
 </aside>
 
 <p>All requests will be validated against a defined list of IP addresses, you can configure these addresses on your Engage account under Administration &gt; Preferences &gt; Data API.</p>
-<h1 id='employees'>Employees</h1><h2 id='create-an-employee'>Create an employee</h2>
+<h1 id='employees'>Employees</h1><h2 id='get-an-employee'>Get an employee</h2>
+<p><code>GET /api/v1/employees/{employee_id}</code></p>
+<div class="highlight"><pre class="highlight plaintext"><code>curl -X GET /api/v1/employees/123 \
+  -H "Authorization: Bearer abc"
+</code></pre></div>
+<blockquote>
+<p>Example JSON Response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>{
+  "employee_id": "123",
+  "first_name": "Joe",
+  "surname": "Bloggs",
+  "date_of_birth": "1980-04-23",
+  "email": "joe.bloggs@example.com",
+  "job_title": "Administrative Assistant",
+  "department_name": "HR",
+  "start_date": "2023-08-01",
+  "first_manager_id": "456",
+  "employment_terms": "Standard",
+  "calendar_name": "Mon-Fri 8hr",
+  "custom_fields": {
+    "pay_group": "PG001",
+    "sick_pay_policy": "SSP",
+    "country": "Scotland",
+    "secondary_employee_id": "38475"
+  }
+}
+</code></pre></div><h2 id='check-if-an-employee-exists'>Check if an employee exists</h2>
+<p><code>GET /api/v1/employees/exists</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>employee_id</td>
+<td>string</td>
+<td>Id of employee to search for.</td>
+</tr>
+</tbody></table>
+<div class="highlight"><pre class="highlight plaintext"><code>curl -X GET /api/v1/employees/exists?employee_id=123 \
+  -H "Authorization: Bearer abc"
+</code></pre></div>
+<blockquote>
+<p>Example JSON Response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>{
+  "exists": true
+}
+</code></pre></div><h2 id='create-an-employee'>Create an employee</h2>
 <p><code>POST /api/v1/employees</code></p>
 <div class="highlight"><pre class="highlight plaintext"><code>curl -X POST /api/v1/employees \
   -H "Authorization: Bearer abc" \
@@ -901,7 +965,29 @@ You can view or generate a new API Key on your Engage account under Administrati
 <aside class="notice notice-info">
   Provide one of <code>department_name</code>, <code>department_id</code> or <code>department_external_id</code> to set department.
 </aside>
-<h2 id='employee-logins'>Employee logins</h2>
+<h2 id='retire-an-employee'>Retire an employee</h2>
+<p><code>PUT /api/v1/employees/{employee_id}/retire</code></p>
+<h3 id='json-parameters-3'>JSON Parameters</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>end_date</td>
+<td>date</td>
+<td>Date to end the employees current role on</td>
+</tr>
+</tbody></table>
+<div class="highlight"><pre class="highlight plaintext"><code>curl -X PUT /api/v1/employees/{employee_id}/retire \
+  -H "Authorization: Bearer abc" \
+  -H "Content-Type: application/json" \
+  -d '{
+     "end_date": "2025-01-30"
+  }' 
+</code></pre></div><h2 id='employee-logins'>Employee logins</h2>
 <p>If you need for the employee to login to Engage, you can provide the <code>needs_engage_login</code> and <code>send_account_activation_email</code> fields to provision their user account. By default the employee will not be able to login.</p>
 <h3 id='send_account_activation_email'>send_account_activation_email</h3>
 <p>For companies with SSO enabled, this will send a welcome email to the employee advising them that they can now login with their company email.</p>
@@ -1049,6 +1135,36 @@ You can view or generate a new API Key on your Engage account under Administrati
   "created_at": "2022-09-01T14:15:59.000+01:00",
   "updated_at": "2023-08-01T14:15:59.000+01:00",
   "retired_at": null
+}
+</code></pre></div><h2 id='check-if-a-department-exists'>Check if a department exists</h2>
+<p><code>GET /api/v1/departments/exists</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>Name of department to search for.</td>
+</tr>
+<tr>
+<td>external_id</td>
+<td>string</td>
+<td>External id of department to search for.</td>
+</tr>
+</tbody></table>
+<div class="highlight"><pre class="highlight plaintext"><code>curl -X GET /api/v1/departments/exists?name=Test \
+  -H "Authorization: Bearer abc"
+</code></pre></div>
+<blockquote>
+<p>Example JSON Response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>{
+  "exists": true
 }
 </code></pre></div><h2 id='create-a-department'>Create a department</h2>
 <p><code>POST /api/v1/departments/</code></p>
@@ -1304,19 +1420,43 @@ You can view or generate a new API Key on your Engage account under Administrati
     "updated_at": "2019-04-18 18:01:57", 
     "absence_cause": "Flu",
     "absence_cause_category": "Infections",
+    "absence_cause_periods": [
+      {
+        "absence_cause_period_id": 77,
+        "absence_cause": "Flu",
+        "absence_cause_category": "Infections",
+        "start_date": "2019-04-18",
+        "end_date": "2019-05-01"
+      },
+      {
+        "absence_cause_period_id": 76,
+        "absence_cause": "Morning sickness",
+        "absence_cause_category": "Pregnancy related",
+        "start_date": "2019-05-02",
+        "end_date": null
+      },
+    ],
     "half_day_start": 0,
     "half_day_end": 1,
   },
   {
     "absence_id": "372847",
     "employee_id": "11223344",
-    "start_date": "2019-04-18",
-    "confirmed_return_date": "2019-04-19",
-    "end_date": "2019-04-18",
-    "created_at": "2019-04-18 18:01:57",
-    "updated_at": "2019-04-18 18:01:57", 
+    "start_date": "2020-04-18",
+    "confirmed_return_date": "2020-04-19",
+    "end_date": "2020-04-18",
+    "created_at": "2020-04-18 18:01:57",
+    "updated_at": "2020-04-19 18:01:57",
     "absence_cause": "Flu",
     "absence_cause_category": "Infections",
+    "absence_cause_periods": [
+      {
+        "absence_cause_period_id": 76,
+        "absence_cause": "Flu",
+        "absence_cause_category": "Infections,
+        "start_date": "2020-04-18",
+        "end_date": "2020-04-19"
+      },
     "half_day_start": "0",
     "half_day_end": "0",
   }
