@@ -50,6 +50,7 @@ end_date | date | Must be YYYY-MM-DD format. Employees end date in current role.
 first_manager_id | integer | Must match an existing employee id.
 second_manager_id | integer | Must match an existing employee id.
 employment_terms | string | Must match existing employment terms.
+fte | decimal | Full-Time Equivalent for the employee's current role.
 calendar_name | string | Must match existing calendar name.
 needs_engage_login | boolean | Creates an Engage login for the employee, email required.
 send_account_activation_email | boolean | <span class="label label-info">required*</span> Required if needs_engage_login provided.
@@ -108,6 +109,7 @@ end_date | date | Must be YYYY-MM-DD format. Employees end date in current role.
 first_manager_id | integer | Must match an existing employee id.
 second_manager_id | integer | Must match an existing employee id.
 employment_terms | string | Must match existing employment terms.
+fte | decimal | Full-Time Equivalent for the employee's current role.
 calendar_name | string | Must match existing calendar name.
 needs_engage_login | boolean | Creates an Engage login for the employee, email required.
 send_account_activation_email | boolean | <span class="label label-info">required*</span> Required if needs_engage_login provided.
