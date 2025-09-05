@@ -54,6 +54,13 @@ configure :build do
   # activate :gzip
 end
 
+after_build do |builder|
+  if File.exist?("CNAME")
+    FileUtils.cp("CNAME", "#{config[:build_dir]}/CNAME")
+    puts "✓ CNAME file copied to build directory"
+  end
+end
+
 # Deploy Configuration
 # If you want Middleman to listen on a different port, you can set that below
 set :port, 4567
