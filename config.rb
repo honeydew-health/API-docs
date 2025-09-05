@@ -69,4 +69,5 @@ helpers do
   require './lib/toc_data.rb'
 end
 
-MiniRacer::Platform.set_flags! :single_threaded
+# MiniRacer configuration removed - using Node.js instead
+# MiniRacer::Platform.set_flags! :single_threaded

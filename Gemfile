@@ -2,7 +2,7 @@ ruby '>= 2.6'
 source 'https://rubygems.org'
 
 gem 'execjs'
-gem 'mini_racer'
+
 # Middleman
 gem 'middleman', '~> 4.4'
 gem 'middleman-syntax', '~> 3.2'
