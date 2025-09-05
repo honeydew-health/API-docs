@@ -286,7 +286,7 @@
   color: #859900;
 }
     </style>
-    <link href="stylesheets/screen-87841294.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/screen-9c19b03a.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print-966d6edc.css" rel="stylesheet" media="print" />
     <link href="stylesheets/honeydew-02494863.css" rel="stylesheet" />
       <script src="javascripts/all-b12a2749.js"></script>
@@ -296,7 +296,7 @@
     </script>
   </head>
 
-  <body class="index" data-languages="[&quot;cURL&quot;]">
+  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -308,7 +308,10 @@
         <img src="images/logo-134a98c8.png" class="logo" alt="" />
       </div>
         <div class="lang-selector">
-              <a href="#" data-language-name="cURL">cURL</a>
+              <a href="#" data-language-name="shell">shell</a>
+              <a href="#" data-language-name="ruby">ruby</a>
+              <a href="#" data-language-name="python">python</a>
+              <a href="#" data-language-name="javascript">javascript</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -319,139 +322,28 @@
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
           </li>
           <li>
-            <a href="#api-sandbox" class="toc-h1 toc-link" data-title="API Sandbox">API Sandbox</a>
-          </li>
-          <li>
-            <a href="#rate-limiting" class="toc-h1 toc-link" data-title="Rate Limiting">Rate Limiting</a>
-          </li>
-          <li>
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#oauth-2-0-token-bearer" class="toc-h2 toc-link" data-title="OAuth 2.0 Token Bearer">OAuth 2.0 Token Bearer</a>
-                  </li>
-                  <li>
-                    <a href="#authorising-your-requests" class="toc-h2 toc-link" data-title="Authorising your requests">Authorising your requests</a>
-                  </li>
-                  <li>
-                    <a href="#obtain-a-token" class="toc-h2 toc-link" data-title="Obtain a token">Obtain a token</a>
-                  </li>
-                  <li>
-                    <a href="#verify-a-token" class="toc-h2 toc-link" data-title="Verify a token">Verify a token</a>
-                  </li>
-                  <li>
-                    <a href="#revoke-a-token" class="toc-h2 toc-link" data-title="Revoke a token">Revoke a token</a>
-                  </li>
-                  <li>
-                    <a href="#api-keys" class="toc-h2 toc-link" data-title="API Keys">API Keys</a>
-                  </li>
-                  <li>
-                    <a href="#ip-whitelisting" class="toc-h2 toc-link" data-title="IP Whitelisting">IP Whitelisting</a>
-                  </li>
-              </ul>
           </li>
           <li>
-            <a href="#employees" class="toc-h1 toc-link" data-title="Employees">Employees</a>
+            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-an-employee" class="toc-h2 toc-link" data-title="Get an employee">Get an employee</a>
+                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
                   </li>
                   <li>
-                    <a href="#check-if-an-employee-exists" class="toc-h2 toc-link" data-title="Check if an employee exists">Check if an employee exists</a>
+                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
                   </li>
                   <li>
-                    <a href="#create-an-employee" class="toc-h2 toc-link" data-title="Create an employee">Create an employee</a>
-                  </li>
-                  <li>
-                    <a href="#update-an-employee" class="toc-h2 toc-link" data-title="Update an employee">Update an employee</a>
-                  </li>
-                  <li>
-                    <a href="#retire-an-employee" class="toc-h2 toc-link" data-title="Retire an employee">Retire an employee</a>
-                  </li>
-                  <li>
-                    <a href="#employee-logins" class="toc-h2 toc-link" data-title="Employee logins">Employee logins</a>
-                  </li>
-                  <li>
-                    <a href="#new-starters" class="toc-h2 toc-link" data-title="New starters">New starters</a>
-                  </li>
-                  <li>
-                    <a href="#new-managers" class="toc-h2 toc-link" data-title="New managers">New managers</a>
-                  </li>
-                  <li>
-                    <a href="#leavers" class="toc-h2 toc-link" data-title="Leavers">Leavers</a>
-                  </li>
-                  <li>
-                    <a href="#transfers" class="toc-h2 toc-link" data-title="Transfers">Transfers</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#job-titles" class="toc-h1 toc-link" data-title="Job Titles">Job Titles</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#create-a-job-title" class="toc-h2 toc-link" data-title="Create a job title">Create a job title</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#departments" class="toc-h1 toc-link" data-title="Departments">Departments</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#list-departments" class="toc-h2 toc-link" data-title="List departments">List departments</a>
-                  </li>
-                  <li>
-                    <a href="#get-a-department" class="toc-h2 toc-link" data-title="Get a department">Get a department</a>
-                  </li>
-                  <li>
-                    <a href="#check-if-a-department-exists" class="toc-h2 toc-link" data-title="Check if a department exists">Check if a department exists</a>
-                  </li>
-                  <li>
-                    <a href="#create-a-department" class="toc-h2 toc-link" data-title="Create a department">Create a department</a>
-                  </li>
-                  <li>
-                    <a href="#update-a-department" class="toc-h2 toc-link" data-title="Update a department">Update a department</a>
-                  </li>
-                  <li>
-                    <a href="#retire-a-department" class="toc-h2 toc-link" data-title="Retire a department">Retire a department</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#absences" class="toc-h1 toc-link" data-title="Absences">Absences</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#list-absences" class="toc-h2 toc-link" data-title="List absences">List absences</a>
+                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
                   </li>
               </ul>
           </li>
           <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
           </li>
-          <li>
-            <a href="#webhooks" class="toc-h1 toc-link" data-title="Webhooks">Webhooks</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#configuring-webhooks" class="toc-h2 toc-link" data-title="Configuring Webhooks">Configuring Webhooks</a>
-                  </li>
-                  <li>
-                    <a href="#webhook-authentication" class="toc-h2 toc-link" data-title="Webhook Authentication">Webhook Authentication</a>
-                  </li>
-                  <li>
-                    <a href="#new-absence" class="toc-h2 toc-link" data-title="New Absence">New Absence</a>
-                  </li>
-                  <li>
-                    <a href="#updated-absence" class="toc-h2 toc-link" data-title="Updated Absence">Updated Absence</a>
-                  </li>
-                  <li>
-                    <a href="#deleted-absence" class="toc-h2 toc-link" data-title="Deleted Absence">Deleted Absence</a>
-                  </li>
-                  <li>
-                    <a href="#best-practices" class="toc-h2 toc-link" data-title="Best Practices">Best Practices</a>
-                  </li>
-              </ul>
-          </li>
       </ul>
         <ul class="toc-footer">
+            <li><a href='#'>Sign Up for a Developer Key</a></li>
             <li><a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a></li>
         </ul>
     </div>
@@ -459,1354 +351,250 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Engage API documentation.</p>
-<h1 id='api-sandbox'>API Sandbox</h1>
-<p>Honeydew can provide a sandbox account and authentication credentials for testing. Email support@honeydew-health.com to request a sandbox account.</p>
-<h1 id='rate-limiting'>Rate Limiting</h1>
-<p><span class="label label-info">Coming soon</span></p>
+<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
 
-<p>To ensure our platform remains stable and available to everyone, the Engage API will be soon be rate-limited.
-We ask developers to use industry standard techniques for limiting calls, caching results and re- trying requests responsibly.
-Calls to our API will be managed by request-based limits, allowing up to 40 requests per minute using a leaky bucket algorithm. You’ll be able to see the current rate using the rate limit header, for example:</p>
+<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
 
-<p><code>X-Engage-Api-Rate-Limit: 32/40</code></p>
+<p>This example API documentation page was created with <a href="https://github.com/slatedocs/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
+<h1 id='authentication'>Authentication</h1>
+<blockquote>
+<p>To authorize, use this code:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
-<p>In this example 32 is the current request count and 40 is the bucket size. The request count decreases according to the leak rate (in this case 1.5 requests per second), so after waiting 10 seconds the response would be down to 17/40, and 0/40 after 48 seconds.</p>
+<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
 
-<p>When a request goes over the rate limit, a &quot;HTTP 429 - Too Many Requests&quot; response is given from the API, this will be provided with a Retry-After header with a value in seconds.</p>
+<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"api_endpoint_here"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
 
-<p><code>X-Engage-Api-Rate-Limit: 40/40</code></p>
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
+</blockquote>
 
-<p><code>X-Engage-Api-Retry-After: 1.5</code></p>
-<h1 id='authentication'>Authentication</h1><h2 id='oauth-2-0-token-bearer'>OAuth 2.0 Token Bearer</h2>
-<p>Engage supports bearer token authentication with a client credentials grant type.
-Within Engage you can generate API Client Applications, each of which has a unique id and secret. Your app should authenticate with this id and secret to obtain a JWT token. That token can be passed as a bearer token to authorise subsequent API requests.
-The token has a lifetime of up to 2 hours, once expired you will need to authenticate again to obtain a new token.</p>
+<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+
+<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+
+<p><code>Authorization: meowmeowmeow</code></p>
 
 <aside class="notice">
-  The token returned by our Bearer Token authentication is a valid JWT (JSON Web Token). You can therefore decode and verify the token and its signature - for manual testing check <a href="https://www.jwt.io">www.jwt.io</a>.
+You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
-<h2 id='authorising-your-requests'>Authorising your requests</h2>
-<p>After <a href="#obtain-a-token">authenticating and obtaining a token</a> provide this token with all requests as the following header parameter.</p>
-<div class="highlight"><pre class="highlight plaintext"><code>curl /example -H "Authorization: Bearer abc"
-</code></pre></div><h3 id='header-parameters'>Header Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Authorization</td>
-<td>string</td>
-<td><span class="label label-info">required</span> Bearer abc</td>
-</tr>
-</tbody></table>
-<h2 id='obtain-a-token'>Obtain a token</h2><h3 id='http-request'>HTTP Request</h3>
-<p><code>POST /auth/token</code></p>
+<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
-<p>Authenticate with the API and obtain a JWT token</p>
-<div class="highlight"><pre class="highlight plaintext"><code>curl -X POST /auth/token -H "Content-Type: application/json" -d '{
-    "grant_type": "client_credentials", 
-    "client_id": "123", 
-    "client_secret": "abc"
-  }' 
+<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">get</span><span class="p">()</span>
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
 </code></pre></div>
 <blockquote>
-<p>Example JSON Response:</p>
+<p>The above command returns JSON structured like this:</p>
 </blockquote>
-<div class="highlight"><pre class="highlight plaintext"><code>{
-     "access_token": "abc",
-     "token_type": "Bearer",
-     "expires_in": 7200,
-     "created_at": 1691747914
-}
-</code></pre></div><h3 id='json-parameters'>JSON Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>grant_type</td>
-<td>string</td>
-<td><span class="label label-info">required</span> The type of grant requested</td>
-</tr>
-<tr>
-<td>client_id</td>
-<td>integer</td>
-<td><span class="label label-info">required</span> Your API Client Application ID</td>
-</tr>
-<tr>
-<td>client_secret</td>
-<td>integer</td>
-<td><span class="label label-info">required</span> Your API Client Application Secret</td>
-</tr>
-</tbody></table>
-
-<aside class="notice notice-info">
-  Each token granted will expire in 2 hours.
-</aside>
-<h2 id='verify-a-token'>Verify a token</h2><h3 id='http-request-2'>HTTP Request</h3>
-<p><code>POST /auth/token/info</code></p>
-<div class="highlight"><pre class="highlight plaintext"><code>curl -X POST /auth/token/info -H "Authorization: abc"
-</code></pre></div>
-<blockquote>
-<p>Example JSON Response:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight plaintext"><code>{
-    "resource_owner_id": null,
-    "scope": [],
-    "expires_in": 6540,
-    "application": {
-        "uid": “abc”
-    },
-    "created_at": 1653667738
-}
-</code></pre></div><h3 id='header-parameters-2'>Header Parameters</h3>
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Authorization</td>
-<td>string</td>
-<td><span class="label label-info">required</span> Your authorization token</td>
-</tr>
-</tbody></table>
-<h2 id='revoke-a-token'>Revoke a token</h2><h3 id='http-request-3'>HTTP Request</h3>
-<p><code>POST /auth/revoke</code></p>
-<div class="highlight"><pre class="highlight plaintext"><code>curl -X POST /auth/revoke -H "Content-Type: application/json" -H "Authorization: Basic abc" -d '{
-  "token": "abc"
-  }'
-</code></pre></div><h3 id='header-parameters-3'>Header Parameters</h3>
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Authorization</td>
-<td>string</td>
-<td><span class="label label-info">required</span> Basic HTTP Authentication with your Base64 encoded &quot;client_id:client_secret&quot;</td>
-</tr>
-</tbody></table>
-<h3 id='json-parameters-2'>JSON Parameters</h3>
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>token</td>
-<td>string</td>
-<td><span class="label label-info">required</span> Your token</td>
-</tr>
-</tbody></table>
-<h2 id='api-keys'>API Keys</h2>
-<p><span class="label label-info">Deprecated</span></p>
-
-<aside class="warning">
-  This authentication method may be deprecated at a future date and is not recommended for future implementations.
-</aside>
-
-<p>This is a simple API Key that should be provided along with any requests to the API via QueryString in the format /?api_key={your api key}.</p>
-
-<p>As all API requests are made over SSL this value is always encrypted.
-You can view or generate a new API Key on your Engage account under Administration &gt; Preferences &gt; Data API.</p>
-<h2 id='ip-whitelisting'>IP Whitelisting</h2>
-<p><span class="label label-info">Deprecated</span></p>
-
-<aside class="warning">
-  This authentication method may be deprecated at a future date and is not recommended for future implementations.
-</aside>
-
-<aside class="notice">
-  This option only works in conjunction with API Key authentication and is ignored when using Bearer token authentication.
-</aside>
-
-<p>All requests will be validated against a defined list of IP addresses, you can configure these addresses on your Engage account under Administration &gt; Preferences &gt; Data API.</p>
-<h1 id='employees'>Employees</h1><h2 id='get-an-employee'>Get an employee</h2>
-<p><code>GET /api/v1/employees/{employee_id}</code></p>
-<div class="highlight"><pre class="highlight plaintext"><code>curl -X GET /api/v1/employees/123 \
-  -H "Authorization: Bearer abc"
-</code></pre></div>
-<blockquote>
-<p>Example JSON Response:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight plaintext"><code>{
-  "employee_id": "123",
-  "first_name": "Joe",
-  "surname": "Bloggs",
-  "date_of_birth": "1980-04-23",
-  "email": "joe.bloggs@example.com",
-  "job_title": "Administrative Assistant",
-  "department_name": "HR",
-  "start_date": "2023-08-01",
-  "first_manager_id": "456",
-  "employment_terms": "Standard",
-  "calendar_name": "Mon-Fri 8hr",
-  "custom_fields": {
-    "pay_group": "PG001",
-    "sick_pay_policy": "SSP",
-    "country": "Scotland",
-    "secondary_employee_id": "38475"
-  }
-}
-</code></pre></div><h2 id='check-if-an-employee-exists'>Check if an employee exists</h2>
-<p><code>GET /api/v1/employees/exists</code></p>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves all kittens.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET http://example.com/api/kittens</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
+<th>Parameter</th>
+<th>Default</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>employee_id</td>
-<td>string</td>
-<td>Id of employee to search for.</td>
+<td>include_cats</td>
+<td>false</td>
+<td>If set to true, the result will also include cats.</td>
+</tr>
+<tr>
+<td>available</td>
+<td>true</td>
+<td>If set to false, the result will include kittens that have already been adopted.</td>
 </tr>
 </tbody></table>
-<div class="highlight"><pre class="highlight plaintext"><code>curl -X GET /api/v1/employees/exists?employee_id=123 \
-  -H "Authorization: Bearer abc"
+
+<aside class="success">
+Remember — a happy kitten is an authenticated kitten!
+</aside>
+<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
 </code></pre></div>
 <blockquote>
-<p>Example JSON Response:</p>
+<p>The above command returns JSON structured like this:</p>
 </blockquote>
-<div class="highlight"><pre class="highlight plaintext"><code>{
-  "exists": true
-}
-</code></pre></div><h2 id='create-an-employee'>Create an employee</h2>
-<p><code>POST /api/v1/employees</code></p>
-<div class="highlight"><pre class="highlight plaintext"><code>curl -X POST /api/v1/employees \
-  -H "Authorization: Bearer abc" \
-  -H "Content-Type: application/json" \
-  -d '{
-     "employee_id": "123",
-     "first_name": "Joe",
-     "surname": "Bloggs",
-     "date_of_birth": "1980-04-23",
-     "email": "joe.bloggs@example.com",
-     "job_title": "Administrative Assistant",
-     "department_name": "HR",
-     "start_date": "2023-08-01",
-     "first_manager_id": "456",
-     "employment_terms": "Standard",
-     "calendar_name": "Mon-Fri 8hr",
-     "needs_engage_login": "true",
-     "send_account_activation_email": "false",
-     "custom_fields": {
-        "pay_group": "PG001",
-        "sick_pay_policy": "SSP",
-        "country": "Scotland",
-        "secondary_employee_id": "38475"
-     }
-  }' 
-</code></pre></div><h3 id='json-parameters'> JSON Parameters</h3>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves a specific kitten.</p>
+
+<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
+<th>Parameter</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>employee_id</td>
-<td>string</td>
-<td><span class="label label-info">required</span> Your unique identifier for the employee.</td>
-</tr>
-<tr>
-<td>first_name</td>
-<td>string</td>
-<td><span class="label label-info">required</span></td>
-</tr>
-<tr>
-<td>middle_name</td>
-<td>string</td>
-<td></td>
-</tr>
-<tr>
-<td>surname</td>
-<td>string</td>
-<td><span class="label label-info">required</span></td>
-</tr>
-<tr>
-<td>date_of_birth</td>
-<td>date</td>
-<td>Must be YYYY-MM-DD format.</td>
-</tr>
-<tr>
-<td>email</td>
-<td>string</td>
-<td><span class="label label-info">required*</span> Required if needs_engage_login true.</td>
-</tr>
-<tr>
-<td>mobile</td>
-<td>string</td>
-<td></td>
-</tr>
-<tr>
-<td>job_title</td>
-<td>string</td>
-<td>Must match an existing job title. Reporting by job title must be enabled in company settings if provided. Invalid values ignored.</td>
-</tr>
-<tr>
-<td>department_name</td>
-<td>string</td>
-<td><span class="label label-info">required*</span> Must match an existing department name. Must provide one of department_id, department_name or department_external_id.</td>
-</tr>
-<tr>
-<td>department_id</td>
-<td>integer</td>
-<td><span class="label label-info">required*</span> Must match an existing department id. Must provide one of department_id, department_name or department_external_id.</td>
-</tr>
-<tr>
-<td>department_external_id</td>
-<td>string</td>
-<td><span class="label label-info">required*</span> Must match an existing department external_id. Must provide one of department_id, department_name or department_external_id.</td>
-</tr>
-<tr>
-<td>start_date</td>
-<td>date</td>
-<td><span class="label label-info">required</span> Must be YYYY-MM-DD format. Employees start date in current role (not overall employment).</td>
-</tr>
-<tr>
-<td>end_date</td>
-<td>date</td>
-<td>Must be YYYY-MM-DD format. Employees end date in current role.</td>
-</tr>
-<tr>
-<td>first_manager_id</td>
-<td>integer</td>
-<td>Must match an existing employee id.</td>
-</tr>
-<tr>
-<td>second_manager_id</td>
-<td>integer</td>
-<td>Must match an existing employee id.</td>
-</tr>
-<tr>
-<td>employment_terms</td>
-<td>string</td>
-<td>Must match existing employment terms.</td>
-</tr>
-<tr>
-<td>calendar_name</td>
-<td>string</td>
-<td>Must match existing calendar name.</td>
-</tr>
-<tr>
-<td>needs_engage_login</td>
-<td>boolean</td>
-<td>Creates an Engage login for the employee, email required.</td>
-</tr>
-<tr>
-<td>send_account_activation_email</td>
-<td>boolean</td>
-<td><span class="label label-info">required*</span> Required if needs_engage_login provided.</td>
-</tr>
-<tr>
-<td>custom_fields</td>
-<td>string</td>
-<td>Key/value pairs of existing custom fields. Key must be snake case.</td>
+<td>ID</td>
+<td>The ID of the kitten to retrieve</td>
 </tr>
 </tbody></table>
+<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
-<aside class="notice notice-info">
-  Provide one of <code>department_name</code>, <code>department_id</code> or <code>department_external_id</code> to set department.
-</aside>
-<h2 id='update-an-employee'>Update an employee</h2>
-<p><code>PUT /api/v1/employees</code></p>
-<div class="highlight"><pre class="highlight plaintext"><code>curl -X PUT /api/v1/employees \
-  -H "Authorization: Bearer abc" \
-  -H "Content-Type: application/json" \
-  -d '{
-     "employee_id": "123",
-     "first_name": "Joe",
-     "surname": "Bloggs",
-     "date_of_birth": "1980-04-23",
-     "email": "joe.bloggs@example.com",
-     "job_title": "Administrative Assistant",
-     "department_name": "HR",
-     "start_date": "2023-08-01",
-     "end_date": "2023-08-30",
-     "first_manager_id": "456",
-     "employment_terms": "Standard",
-     "calendar_name": "Mon-Fri 8hr",
-     "custom_fields": {
-        "pay_group": "PG001",
-        "sick_pay_policy": "SSP",
-        "country": "Scotland",
-        "secondary_employee_id": "38475"
-     }
-  }' 
-</code></pre></div><h3 id='json-parameters-2'> JSON Parameters</h3>
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>employee_id</td>
-<td>string</td>
-<td><span class="label label-info">required</span> Your unique identifier for the employee.</td>
-</tr>
-<tr>
-<td>first_name</td>
-<td>string</td>
-<td><span class="label label-info">required</span></td>
-</tr>
-<tr>
-<td>middle_name</td>
-<td>string</td>
-<td></td>
-</tr>
-<tr>
-<td>surname</td>
-<td>string</td>
-<td><span class="label label-info">required</span></td>
-</tr>
-<tr>
-<td>date_of_birth</td>
-<td>date</td>
-<td>Must be YYYY-MM-DD format.</td>
-</tr>
-<tr>
-<td>email</td>
-<td>string</td>
-<td><span class="label label-info">required*</span> Required if needs_engage_login true.</td>
-</tr>
-<tr>
-<td>mobile</td>
-<td>string</td>
-<td></td>
-</tr>
-<tr>
-<td>job_title</td>
-<td>string</td>
-<td>Must match an existing job title. Reporting by job title must be enabled in company settings if provided. Invalid values ignored.</td>
-</tr>
-<tr>
-<td>department_name</td>
-<td>string</td>
-<td><span class="label label-info">required*</span> Must match an existing department name. Must provide one of department_id, department_name or department_external_id.</td>
-</tr>
-<tr>
-<td>department_id</td>
-<td>integer</td>
-<td><span class="label label-info">required*</span> Must match an existing department id. Must provide one of department_id, department_name or department_external_id.</td>
-</tr>
-<tr>
-<td>department_external_id</td>
-<td>string</td>
-<td><span class="label label-info">required*</span> Must match an existing department external_id. Must provide one of department_id, department_name or department_external_id.</td>
-</tr>
-<tr>
-<td>start_date</td>
-<td>date</td>
-<td><span class="label label-info">required*</span> Must be YYYY-MM-DD format. Employees start date in current role (not overall employment). Required unless end_date is provided and updating employee to leaver.</td>
-</tr>
-<tr>
-<td>end_date</td>
-<td>date</td>
-<td>Must be YYYY-MM-DD format. Employees end date in current role. Ignored if new start date is provided.</td>
-</tr>
-<tr>
-<td>first_manager_id</td>
-<td>integer</td>
-<td>Must match an existing employee id.</td>
-</tr>
-<tr>
-<td>second_manager_id</td>
-<td>integer</td>
-<td>Must match an existing employee id.</td>
-</tr>
-<tr>
-<td>employment_terms</td>
-<td>string</td>
-<td>Must match existing employment terms.</td>
-</tr>
-<tr>
-<td>calendar_name</td>
-<td>string</td>
-<td>Must match existing calendar name.</td>
-</tr>
-<tr>
-<td>needs_engage_login</td>
-<td>boolean</td>
-<td>Creates an Engage login for the employee, email required.</td>
-</tr>
-<tr>
-<td>send_account_activation_email</td>
-<td>boolean</td>
-<td><span class="label label-info">required*</span> Required if needs_engage_login provided.</td>
-</tr>
-<tr>
-<td>custom_fields</td>
-<td>string</td>
-<td>Key/value pairs of existing custom fields. Key must be snake case.</td>
-</tr>
-</tbody></table>
+<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
 
-<aside class="notice notice-info">
-  Provide one of <code>department_name</code>, <code>department_id</code> or <code>department_external_id</code> to set department.
-</aside>
-<h2 id='retire-an-employee'>Retire an employee</h2>
-<p><code>PUT /api/v1/employees/{employee_id}/retire</code></p>
-<h3 id='json-parameters-3'>JSON Parameters</h3>
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>end_date</td>
-<td>date</td>
-<td>Date to end the employees current role on</td>
-</tr>
-</tbody></table>
-<div class="highlight"><pre class="highlight plaintext"><code>curl -X PUT /api/v1/employees/{employee_id}/retire \
-  -H "Authorization: Bearer abc" \
-  -H "Content-Type: application/json" \
-  -d '{
-     "end_date": "2025-01-30"
-  }' 
-</code></pre></div><h2 id='employee-logins'>Employee logins</h2>
-<p>If you need for the employee to login to Engage, you can provide the <code>needs_engage_login</code> and <code>send_account_activation_email</code> fields to provision their user account. By default the employee will not be able to login.</p>
-<h3 id='send_account_activation_email'>send_account_activation_email</h3>
-<p>For companies with SSO enabled, this will send a welcome email to the employee advising them that they can now login with their company email.</p>
+<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span> <span class="se">\</span>
+  <span class="nt">-X</span> DELETE <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
 
-<p>For companies without SSO enabled, this will send a welcome email to the employee with a secure link from which they can set their password and login.</p>
-<h2 id='new-starters'>New starters</h2><h3 id='recommended-additional-minimum-values-for-new-starters'>Recommended additional minimum values for new starters</h3>
-<ul>
-<li>first_manager_id</li>
-<li>second_manager_id</li>
-</ul>
-<h2 id='new-managers'>New managers</h2><h3 id='recommended-additional-minimum-values-for-new-managers'>Recommended additional minimum values for new managers</h3>
-<ul>
-<li>email</li>
-<li>mobile</li>
-<li>first_manager_id</li>
-<li>second_manager_id</li>
-</ul>
-<h2 id='leavers'>Leavers</h2><h3 id='recommended-additional-minimum-values-for-leavers'>Recommended additional minimum values for leavers</h3>
-<ul>
-<li>end_date</li>
-</ul>
-
-<aside class="notice notice-info">
-  <code>start_date</code> is not required to update an existing employee as a leaver. The provided <code>end_date</code> will be used to end the employees existing role.
-</aside>
-<h2 id='transfers'>Transfers</h2><h3 id='recommended-additional-minimum-values-for-transfers'>Recommended additional minimum values for transfers</h3>
-<ul>
-<li>start_date</li>
-<li>department_name</li>
-<li>first_manager_id</li>
-<li>second_manager_id</li>
-</ul>
-
-<aside class="notice notice-info">
-  If a new <code>start_date</code> is given but <code>department_name</code> remains the same, the new <code>start_date</code> will be ignored and a transfer will not be recorded.
-</aside>
-
-<aside class="notice notice-info">
-  Employees existing role will be ended 1 day before new <code>start_date</code>.
-</aside>
-
-<aside class="warning">
-  Do not include an <code>end_date</code> for transferring active employees. Providing an <code>end_date</code> will process the employee as a leaver instead.
-</aside>
-<h1 id='job-titles'>Job Titles</h1><h2 id='create-a-job-title'>Create a job title</h2>
-<p><code>POST /api/v1/job_titles</code></p>
-<div class="highlight"><pre class="highlight plaintext"><code>curl -X POST /api/v1/job_titles \
-  -H "Authorization: Bearer abc" \
-  -H "Content-Type: application/json" \
-  -d '{
-     "title": "abc"
-  }' 
-</code></pre></div><h3 id='json-parameters'> JSON Parameters</h3>
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>title</td>
-<td>string</td>
-<td><span class="label label-info">required</span> Unique job title.</td>
-</tr>
-</tbody></table>
-<h1 id='departments'>Departments</h1><h2 id='list-departments'>List departments</h2>
-<p><code>GET /api/v1/departments</code></p>
-<div class="highlight"><pre class="highlight plaintext"><code>curl -X GET /api/v1/departments \
-  -H "Authorization: Bearer abc"
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
 </code></pre></div>
 <blockquote>
-<p>Example JSON Response:</p>
+<p>The above command returns JSON structured like this:</p>
 </blockquote>
-<div class="highlight"><pre class="highlight plaintext"><code>[
-  {
-    "id": "1",
-    "external_id": "abc1",
-    "name": "abc",
-    "parent_department_id": null,
-    "parent_department_external_id": null,
-    "parent_department": null,
-    "created_at": "2022-09-01T14:15:59.000+01:00",
-    "updated_at": "2022-09-01T14:15:59.000+01:00",
-    "retired_at": null
-  },
-  {
-    "id": "2",
-    "external_id": "xyz2",
-    "name": "xyz",
-    "parent_department_id": "1",
-    "parent_department_external_id": "abc1",
-    “parent_department": "abc",
-    "created_at": "2022-09-01T14:15:59.000+01:00",
-    "updated_at": "2022-09-01T14:15:59.000+01:00",
-    "retired_at": null
-  }
-]
-</code></pre></div><h3 id='query-parameters'>Query Parameters</h3>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint deletes a specific kitten.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
+<th>Parameter</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>parent_department_id</td>
-<td>integer</td>
-<td>Id of parent department to filter by.</td>
-</tr>
-<tr>
-<td>parent_department_external_id</td>
-<td>string</td>
-<td>Your id of parent department to filter by.</td>
+<td>ID</td>
+<td>The ID of the kitten to delete</td>
 </tr>
 </tbody></table>
-<h2 id='get-a-department'>Get a department</h2>
-<p><code>GET /api/v1/departments/{id}</code></p>
-
-<p><code>GET /api/v1/departments/external_id/{id}</code></p>
-
-<blockquote>
-<p>Using our Id:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight plaintext"><code>curl -X GET /api/v1/departments/123 \
-  -H "Authorization: Bearer abc"
-</code></pre></div>
-<blockquote>
-<p>Using your Id:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight plaintext"><code>curl -X GET /api/v1/departments/external_id/abc123 \
-  -H "Authorization: Bearer abc"
-</code></pre></div>
-<blockquote>
-<p>Example JSON Response:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight plaintext"><code>{
-  "id": "123",
-  "external_id": "abc123",
-  "name": "abc",
-  "parent_department_id": null,
-  "parent_department_external_id": null,
-  "parent_department": null,
-  "created_at": "2022-09-01T14:15:59.000+01:00",
-  "updated_at": "2023-08-01T14:15:59.000+01:00",
-  "retired_at": null
-}
-</code></pre></div><h2 id='check-if-a-department-exists'>Check if a department exists</h2>
-<p><code>GET /api/v1/departments/exists</code></p>
-<h3 id='query-parameters-2'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>name</td>
-<td>string</td>
-<td>Name of department to search for.</td>
-</tr>
-<tr>
-<td>external_id</td>
-<td>string</td>
-<td>External id of department to search for.</td>
-</tr>
-</tbody></table>
-<div class="highlight"><pre class="highlight plaintext"><code>curl -X GET /api/v1/departments/exists?name=Test \
-  -H "Authorization: Bearer abc"
-</code></pre></div>
-<blockquote>
-<p>Example JSON Response:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight plaintext"><code>{
-  "exists": true
-}
-</code></pre></div><h2 id='create-a-department'>Create a department</h2>
-<p><code>POST /api/v1/departments/</code></p>
-<div class="highlight"><pre class="highlight plaintext"><code>curl -X POST /api/v1/departments \
-  -H "Authorization: Bearer abc" \
-  -H "Content-Type: application/json" \
-  -d '{
-      "name": "abc",
-      "external_id": "abc123",
-      "parent_department_id": null,
-      "parent_department_external_id": null,
-      "parent_department": null,
-     }'
-</code></pre></div><h3 id='json-parameters'>JSON Parameters</h3>
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>name</td>
-<td>string</td>
-<td><span class="label label-info">required</span> Unique department name.</td>
-</tr>
-<tr>
-<td>external_id</td>
-<td>string</td>
-<td>Your unique identifier for the department, 25 character max.</td>
-</tr>
-<tr>
-<td>parent_department</td>
-<td>string</td>
-<td>Name of the existing parent department.</td>
-</tr>
-<tr>
-<td>parent_department_id</td>
-<td>string</td>
-<td>Id of the existing parent department.</td>
-</tr>
-<tr>
-<td>parent_department_external_id</td>
-<td>string</td>
-<td>Your unique identifier for the existing parent department.</td>
-</tr>
-</tbody></table>
-
-<aside class="notice notice-info">
-  Provide one of <code>parent_department</code>, <code>parent_department_id</code> or <code>parent_department_external_id</code> to set parent department.
-</aside>
-<h2 id='update-a-department'>Update a department</h2>
-<p><code>PUT /api/v1/departments/{id}</code></p>
-
-<p><code>PUT /api/v1/departments/external_id/{external_id}</code></p>
-
-<blockquote>
-<p>Using our id:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight plaintext"><code>curl -X PUT /api/v1/departments/123 \
-  -H "Authorization: Bearer abc" \
-  -H "Content-Type: application/json" \
-  -d '{
-     "name": "abc"
-  }' 
-</code></pre></div>
-<blockquote>
-<p>Using your id:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight plaintext"><code>curl -X PUT /api/v1/departments/external_id/abc123 \
-  -H "Authorization: Bearer abc" \
-  -H "Content-Type: application/json" \
-  -d '{
-     "name": "abc"
-  }' 
-</code></pre></div>
-<blockquote>
-<p>Example JSON Response:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight plaintext"><code>{
-  "id": "123",
-  "external_id": "abc123",
-  "name": "abc",
-  "parent_department_id": null,
-  "parent_department_external_id": null,
-  "parent_department": null,
-  "created_at": "2022-09-01T14:15:59.000+01:00",
-  "updated_at": "2023-08-01T14:15:59.000+01:00",
-  "retired_at": null
-}
-</code></pre></div><h3 id='json-parameters-2'>JSON Parameters</h3>
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>name</td>
-<td>string</td>
-<td><span class="label label-info">required</span> Unique department name.</td>
-</tr>
-<tr>
-<td>external_id</td>
-<td>string</td>
-<td>Your unique identifier for the department, 25 character max.</td>
-</tr>
-<tr>
-<td>parent_department</td>
-<td>string</td>
-<td>Name of the existing parent department.</td>
-</tr>
-<tr>
-<td>parent_department_id</td>
-<td>string</td>
-<td>Id of the existing parent department.</td>
-</tr>
-<tr>
-<td>parent_department_external_id</td>
-<td>string</td>
-<td>Your unique identifier for the existing parent department.</td>
-</tr>
-</tbody></table>
-
-<aside class="notice notice-info">
-  Provide one of <code>parent_department</code>, <code>parent_department_id</code> or <code>parent_department_external_id</code> to set parent department.
-</aside>
-<h2 id='retire-a-department'>Retire a department</h2>
-<p><code>PUT /api/v1/departments/{id}/retire</code></p>
-
-<p><code>PUT /api/v1/departments/external_id/{external_id}/retire</code></p>
-
-<blockquote>
-<p>Using our id:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight plaintext"><code>curl -X PUT /api/v1/departments/123/retire \
-  -H "Authorization: Bearer abc" \
-  -H "Content-Type: application/json" \
-  -d '{
-     "retire_at": "2023-08-01",
-     "employee_action": "retire"
-  }' 
-</code></pre></div>
-<blockquote>
-<p>Using your id:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight plaintext"><code>curl -X PUT /api/v1/departments/external_id/abc123/retire \
-  -H "Authorization: Bearer abc" \
-  -H "Content-Type: application/json" \
-  -d '{
-     "retire_at": "2023-08-01",
-     "employee_action": "transfer",
-     "transfer_department_external_id": "abc123"
-  }' 
-</code></pre></div>
-<blockquote>
-<p>Example JSON Response:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight plaintext"><code>{
-  "id": "123",
-  "external_id": "abc123",
-  "name": "abc",
-  "parent_department_id": null,
-  "parent_department_external_id": null,
-  "parent_department": null,
-  "created_at": "2022-09-01T14:15:59.000+01:00",
-  "updated_at": "2023-08-01T14:15:59.000+01:00",
-  "retired_at": "2023-08-01T00:00:00.000+01:00"
-}
-</code></pre></div><h3 id='json-parameters-3'>JSON Parameters</h3>
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>retire_at</td>
-<td>date</td>
-<td><span class="label label-info">required</span> Must be YYYY-MM-DD format.</td>
-</tr>
-<tr>
-<td>employee_action</td>
-<td>string</td>
-<td><code>retire</code> or <code>transfer</code>. Defaults to <code>retire</code>.</td>
-</tr>
-<tr>
-<td>sub_department_action</td>
-<td>string</td>
-<td><code>retire</code> or <code>promote</code>. Defaults to <code>retire</code>.</td>
-</tr>
-<tr>
-<td>transfer_department_id</td>
-<td>integer</td>
-<td><span class="label label-info">required*</span> Required if employee action = <code>transfer</code> and <code>transfer_department_external_id</code> not provided.</td>
-</tr>
-<tr>
-<td>transfer_department_external_id</td>
-<td>string</td>
-<td><span class="label label-info">required*</span> Required if employee action = <code>transfer</code> and <code>transfer_department_id</code> not provided.</td>
-</tr>
-</tbody></table>
-<h3 id='employee-action'>Employee Action</h3>
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>retire</td>
-<td>Employees current role will be ended.</td>
-</tr>
-<tr>
-<td>transfer</td>
-<td>Employees current role will be ended and a new role started at transfer department.</td>
-</tr>
-</tbody></table>
-<h3 id='sub-department-action'>Sub Department Action</h3>
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>retire</td>
-<td>Sub departments will be retired.</td>
-</tr>
-<tr>
-<td>promote</td>
-<td>Sub departments will be promoted to level of retiring department.</td>
-</tr>
-</tbody></table>
-<h1 id='absences'>Absences</h1><h2 id='list-absences'>List absences</h2>
-<p><code>GET /api/v1/absences</code></p>
-<div class="highlight"><pre class="highlight plaintext"><code>curl -X GET /api/v1/absences?start_date=2019-04-18 \
-  -H "Authorization: Bearer abc"
-</code></pre></div>
-<blockquote>
-<p>Example JSON Response:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight plaintext"><code>[
-  {
-    "absence_id": "372846",
-    "employee_id": "11223344",
-    "start_date": "2019-04-18",
-    "confirmed_return_date": null,
-    "end_date": null,
-    "created_at": "2019-04-18 18:01:57", 
-    "updated_at": "2019-04-18 18:01:57", 
-    "absence_cause": "Flu",
-    "absence_cause_category": "Infections",
-    "absence_cause_periods": [
-      {
-        "absence_cause_period_id": 77,
-        "absence_cause": "Flu",
-        "absence_cause_category": "Infections",
-        "start_date": "2019-04-18",
-        "end_date": "2019-05-01"
-      },
-      {
-        "absence_cause_period_id": 76,
-        "absence_cause": "Morning sickness",
-        "absence_cause_category": "Pregnancy related",
-        "start_date": "2019-05-02",
-        "end_date": null
-      },
-    ],
-    "half_day_start": 0,
-    "half_day_end": 1,
-  },
-  {
-    "absence_id": "372847",
-    "employee_id": "11223344",
-    "start_date": "2020-04-18",
-    "confirmed_return_date": "2020-04-19",
-    "end_date": "2020-04-18",
-    "created_at": "2020-04-18 18:01:57",
-    "updated_at": "2020-04-19 18:01:57",
-    "absence_cause": "Flu",
-    "absence_cause_category": "Infections",
-    "absence_cause_periods": [
-      {
-        "absence_cause_period_id": 76,
-        "absence_cause": "Flu",
-        "absence_cause_category": "Infections,
-        "start_date": "2020-04-18",
-        "end_date": "2020-04-19"
-      },
-    "half_day_start": "0",
-    "half_day_end": "0",
-  }
-]
-</code></pre></div><h3 id='query-parameters'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>start_date</td>
-<td>date</td>
-<td>Must be YYYY-MM-DD format. Matches equal to or greater than.</td>
-</tr>
-<tr>
-<td>confirmed_return_date</td>
-<td>date</td>
-<td>Must be YYYY-MM-DD format. Matches equal to or greater than.</td>
-</tr>
-<tr>
-<td>created_at</td>
-<td>date</td>
-<td>Must be YYYY-MM-DD format. Matches equal to or greater than.</td>
-</tr>
-<tr>
-<td>updated_at</td>
-<td>date</td>
-<td>Must be YYYY-MM-DD format. Matches equal to or greater than.</td>
-</tr>
-</tbody></table>
-
-<aside class="warning">
-  <strong>At least one</strong> query parameter required.
-</aside>
-
-<aside class="notice notice-info">
-  <code>absence_cause</code> and <code>absence_cause_category</code> only returned if privacy settings allow. See Administration > Preferences > Data API on your Engage Account.
-</aside>
 <h1 id='errors'>Errors</h1>
-<p>The Engage API will return a HTTP 200 response code for all successful requests. You should check the response code to determine the success of each request.</p>
+<aside class="notice">
+This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
+</aside>
 
-<p>Some common error responses that you may encounter include:</p>
+<p>The Kittn API uses the following error codes:</p>
 
 <table><thead>
 <tr>
-<th>Code</th>
-<th>Name</th>
-<th>Description</th>
+<th>Error Code</th>
+<th>Meaning</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>400</td>
-<td>Bad Request</td>
-<td>Your request is invalid, most commonly a validation issue</td>
+<td>Bad Request -- Your request is invalid.</td>
 </tr>
 <tr>
 <td>401</td>
-<td>Unauthorized</td>
-<td>Your authentication is invalid</td>
+<td>Unauthorized -- Your API key is wrong.</td>
 </tr>
 <tr>
 <td>403</td>
-<td>Forbidden</td>
-<td>You cannot perform that action</td>
+<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
 </tr>
 <tr>
 <td>404</td>
-<td>Not Found</td>
-<td>The resource that you requested could not be found</td>
+<td>Not Found -- The specified kitten could not be found.</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
 </tr>
 <tr>
 <td>406</td>
-<td>Not Acceptable</td>
-<td>Your requested format isn&#39;t supported</td>
+<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone -- The kitten requested has been removed from our servers.</td>
+</tr>
+<tr>
+<td>418</td>
+<td>I&#39;m a teapot.</td>
 </tr>
 <tr>
 <td>429</td>
-<td>Too Many Requests</td>
-<td>You have made too many requests in a short period of time <a href="#rate-limiting-coming-soon">See Rate Limiting</a></td>
+<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
 </tr>
 <tr>
 <td>500</td>
-<td>Internal Server Error</td>
-<td>We&#39;re having a problem processing your request. Please try again later or contact support if persistent.</td>
+<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
 </tr>
 <tr>
 <td>503</td>
-<td>Service Unavailable</td>
-<td>We&#39;re temporarily offline. Please try again later</td>
+<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
 </tr>
 </tbody></table>
-
-<p>Most errors will include a JSON body with further details.</p>
-<h1 id='webhooks'>Webhooks</h1>
-<p>Allow your system to receive live events from Engage.</p>
-
-<p>Absence events can occur at any time of the day or night and on any day of the week. Knowing when to fetch a new data set is not always easy and fetching large sets of data means more data processing at the receiving end. Using webhooks, Engage can tell you when something happens, optimising the data flows.</p>
-
-<p>The specific actions your webhook endpoint may take differs based upon the event. Some examples include:</p>
-
-<ul>
-<li>Creating a new absence record</li>
-<li>Updating the absence dates and reasons Logging a confirmed return date</li>
-<li>Deleting a previously recorded return date Removing an absence record</li>
-</ul>
-<h2 id='configuring-webhooks'>Configuring Webhooks</h2>
-<p>You can manage webhooks on your Engage account under Administration &gt; Data API &gt; Webhooks.</p>
-
-<p>New webhook endpoints will be authorised through our Firewall by support.</p>
-
-<p>If using bearer token authentication please provide the following to support for configuration: </p>
-
-<ul>
-<li>Full Authentication API documentation with credentials, including:
-
-<ul>
-<li>Authentication url
-
-<ul>
-<li>Expected HTTP headers / HTTP body</li>
-<li>User id / secret</li>
-<li>Example HTTP response</li>
-</ul></li>
-<li>Token refresh url (optional)
-
-<ul>
-<li>Expected HTTP headers / HTTP body</li>
-<li>User id / secret</li>
-<li>Example HTTP response</li>
-</ul></li>
-</ul></li>
-</ul>
-<h2 id='webhook-authentication'>Webhook Authentication</h2><h3 id='hmac-signature'>HMAC Signature</h3>
-<p>Webhooks carry a HMAC signature which can be used to verify the authenticity of the request. This will be provided as the HTTP header:</p>
-
-<p><code>X-Engage-API-Signature: t=epoch,v1=hmac</code></p>
-
-<p>To verify the signature, you should split this value to obtain the epoch timestamp and the hmac separately. In future, there may be multiple versions of the HMAC so be sure to programatically select the correct HMAC version.</p>
-
-<p>The v1 HMAC uses the SHA256 hash algorithm with your api key as the secret. The content is comprised of the epoch timestamp and the HTTP body payload separated by a period.</p>
-
-<p>Here’s an example of creating the hash in Ruby:</p>
-
-<p><code>OpenSSL::HMAC.hexdigest(&#39;SHA256&#39;, api_key, &quot;#{timestamp}.#{body}&quot;)</code></p>
-
-<p>If you construct your own hash with the same timestamp and the received body this should match the received signature, allowing you to verify the integrity of the HTTP body and the time validity of the request. If either the header epoch value doesn’t match the hash epoch value, or the body doesn’t match the hash body then the signatures will not match.</p>
-<h3 id='oauth-2-0-bearer-token'>OAuth 2.0 Bearer Token</h3>
-<p>Webhooks can be configured to authenticate against OAuth 2.0 bearer token authentication to retrieve a token from your servers, which will then be included in webhook request headers.</p>
-
-<p>Please provide support with your Authentication API documentation and test/production credentials for verification of compatibility and setup.</p>
-<h2 id='new-absence'>New Absence</h2>
-<p><code>HTTP POST {your_url}</code></p>
-<h3 id='headers'>Headers</h3>
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Content-Type</td>
-<td>string</td>
-<td>application/json</td>
-</tr>
-<tr>
-<td>X-Engage-API-Version</td>
-<td>string</td>
-<td>v1</td>
-</tr>
-<tr>
-<td>X-Engage-API-Webhook-Event</td>
-<td>string</td>
-<td>Absence.Created</td>
-</tr>
-<tr>
-<td>X-Engage-API-Signature</td>
-<td>string</td>
-<td>epoch=x,v1=y <a href="#hmac-signature">See HMAC Signature</a></td>
-</tr>
-<tr>
-<td>Authorization</td>
-<td>string</td>
-<td>Bearer abc (if applicable, <a href="#oauth-2-0-bearer-token">See OAuth 2.0 Bearer Token</a>)</td>
-</tr>
-</tbody></table>
-
-<blockquote>
-<p>Example JSON body:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight plaintext"><code>  "event": {
-    "name": "Absence.Created",
-    "object_type": "Absence",
-    "object_id": 123,
-    "object": {
-      "absence_id": 123,
-      "employee_id": "456",
-      "start_date": "2022-06-15",
-      "end_date": null,
-      "expected_end_date": "2022-06-17",
-      "confirmed_return_date": null,
-      "half_day_start": 1,
-      "half_day_end": 0,
-      "absence_cause": null,
-      "absence_cause_category": null,
-      "medical_appointment_arranged": null,
-      "medical_appointment_date": null,
-      "created_at": "2022-06-15T08:21:56.000+00:00",
-      "updated_at": "2022-06-15T09:35:25.000+00:00"
-    } 
-  }
-</code></pre></div>
-<aside class="notice notice-info">
-  <code>absence_cause</code> and <code>absence_cause_category</code> only returned if privacy settings allow. See Administration > Preferences > Data API on your Engage Account.
-</aside>
-<h2 id='updated-absence'>Updated Absence</h2>
-<p><code>HTTP POST {your_url}</code></p>
-<h3 id='headers-2'>Headers</h3>
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Content-Type</td>
-<td>string</td>
-<td>application/json</td>
-</tr>
-<tr>
-<td>X-Engage-API-Version</td>
-<td>string</td>
-<td>v1</td>
-</tr>
-<tr>
-<td>X-Engage-API-Webhook-Event</td>
-<td>string</td>
-<td>Absence.Updated</td>
-</tr>
-<tr>
-<td>X-Engage-API-Signature</td>
-<td>string</td>
-<td>epoch=x,v1=y <a href="#hmac-signature">See HMAC Signature</a></td>
-</tr>
-<tr>
-<td>Authorization</td>
-<td>string</td>
-<td>Bearer abc (if applicable, <a href="#oauth-2-0-bearer-token">See OAuth 2.0 Bearer Token</a>)</td>
-</tr>
-</tbody></table>
-
-<blockquote>
-<p>Example JSON body:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight plaintext"><code>  "event": {
-    "name": "Absence.Updated",
-    "object_type": "Absence",
-    "object_id": 123,
-    "object": {
-      "absence_id": 123,
-      "employee_id": "456",
-      "start_date": "2022-06-15",
-      "end_date": null,
-      "expected_end_date": "2022-06-17",
-      "confirmed_return_date": null,
-      "half_day_start": 1,
-      "half_day_end": 0,
-      "absence_cause": null,
-      "absence_cause_category": null,
-      "medical_appointment_arranged": null,
-      "medical_appointment_date": null,
-      "created_at": "2022-06-15T08:21:56.000+00:00",
-      "updated_at": "2022-06-15T09:35:25.000+00:00"
-    } 
-  }
-</code></pre></div>
-<aside class="notice notice-info">
-  <code>absence_cause</code> and <code>absence_cause_category</code> only returned if privacy settings allow. See Administration > Preferences > Data API on your Engage Account.
-</aside>
-<h2 id='deleted-absence'>Deleted Absence</h2>
-<p><code>HTTP POST {your_url}</code></p>
-<h3 id='headers-3'>Headers</h3>
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Content-Type</td>
-<td>string</td>
-<td>application/json</td>
-</tr>
-<tr>
-<td>X-Engage-API-Version</td>
-<td>string</td>
-<td>v1</td>
-</tr>
-<tr>
-<td>X-Engage-API-Webhook-Event</td>
-<td>string</td>
-<td>Absence.Deleted</td>
-</tr>
-<tr>
-<td>X-Engage-API-Signature</td>
-<td>string</td>
-<td>epoch=x,v1=y <a href="#hmac-signature">See HMAC Signature</a></td>
-</tr>
-<tr>
-<td>Authorization</td>
-<td>string</td>
-<td>Bearer abc (if applicable, <a href="#oauth-2-0-bearer-token">See OAuth 2.0 Bearer Token</a>)</td>
-</tr>
-</tbody></table>
-
-<blockquote>
-<p>Example JSON body:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight plaintext"><code>  "event": {
-    "name": "Absence.Deleted",
-    "object_type": "Absence",
-    "object_id": 123,
-    "object": {
-      "id": 123
-    } 
-  }
-</code></pre></div><h2 id='best-practices'>Best Practices</h2><h3 id='receiving-webhooks'>Receiving webhooks</h3>
-<p>After your webhook endpoint is created, Engage sends a <code>HTTP POST</code> to your endpoint url every time the subscribed events occur. The request body will be a JSON Event object detailing the event and the associated object.</p>
-
-<p>Your service should ingest the webhook and return a <code>HTTP 200</code> response as fast as possible. Any non <code>HTTP 200</code> response (including redirects) will be treated as an error response by Engage. A common pattern is to store the payload in a message queue for later processing by a background worker. This reduces the chance of the request timing out, and the webhook delivery counting as a failure.</p>
-<h3 id='implementing-reconciliation-jobs'>Implementing reconciliation jobs</h3>
-<p>Webhook delivery cannot be guaranteed, therefore we recommend that you implement regular reconciliation tasks to fetch and update data from the Engage API.</p>
-<h3 id='frequency-of-retries'>Frequency of retries</h3>
-<p>Webhooks have a timeout on HTTP response of 5 seconds - if your service doesn’t return a response within that time, or returns a non <code>HTTP 200</code> response Engage will retry the webhook up to 5 times.</p>
-
-<p>The first retry will run 30 seconds later, then 1m 45s, 4m 30s and finally 10 minutes after the initial request at which point it will fail permanently.</p>
-<h3 id='managing-webhook-api-versions'>Managing webhook API versions</h3>
-<p>Add logic to your code so that it handles webhooks differently depending on their API version. To check the API version, your app can use the <code>X-Engage-API-Version</code> request header in every webhook POST request.</p>
-
-<p>You should select the API version you are using in the Company Preferences DATA API section in Engage.</p>
 
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="cURL">cURL</a>
+                <a href="#" data-language-name="shell">shell</a>
+                <a href="#" data-language-name="ruby">ruby</a>
+                <a href="#" data-language-name="python">python</a>
+                <a href="#" data-language-name="javascript">javascript</a>
           </div>
       </div>
     </div>
