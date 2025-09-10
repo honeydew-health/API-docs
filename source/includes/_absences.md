@@ -28,14 +28,18 @@ curl -X GET /api/v1/absences?start_date=2019-04-18 \
         "absence_cause": "Flu",
         "absence_cause_category": "Infections",
         "start_date": "2019-04-18",
-        "end_date": "2019-05-01"
+        "end_date": "2019-05-01",
+        "half_day_start": 0,
+        "half_day_end": 0,
       },
       {
         "absence_cause_period_id": 76,
         "absence_cause": "Morning sickness",
         "absence_cause_category": "Pregnancy related",
         "start_date": "2019-05-02",
-        "end_date": null
+        "end_date": null,
+        "half_day_start": 0,
+        "half_day_end": 1,
       },
     ],
     "half_day_start": 0,
