@@ -1,5 +1,56 @@
 # Employees
 
+## Get an employee
+`GET /api/v1/employees/{employee_id}`
+
+```
+curl -X GET /api/v1/employees/123 \
+  -H "Authorization: Bearer abc"
+```
+
+> Example JSON Response:
+
+```
+{
+  "employee_id": "123",
+  "first_name": "Joe",
+  "surname": "Bloggs",
+  "date_of_birth": "1980-04-23",
+  "email": "joe.bloggs@example.com",
+  "job_title": "Administrative Assistant",
+  "department_name": "HR",
+  "start_date": "2023-08-01",
+  "end_date": "2023-08-30",
+  "first_manager_id": "456",
+  "employment_terms": "Standard",
+  "calendar_name": "Mon-Fri 8hr",
+  "custom_fields": {
+    "pay_group": "PG001",
+    "sick_pay_policy": "SSP",
+    "country": "Scotland",
+    "secondary_employee_id": "38475"
+  }
+}
+```
+
+## Check if an employee exists
+`GET /api/v1/employees/exists?employee_id={employee_id}`
+
+```
+curl -X GET /api/v1/employees/exists?employee_id={employee_id} \
+  -H "Authorization: Bearer abc"
+```
+
+> Example JSON Response:
+
+```
+{
+  exists: true
+}
+```
+
+Will return a value of true + HTTP 200 if employee exists, false + HTTP 404 if employee doesn't exist.
+
 ## Create an employee
 `POST /api/v1/employees`
 
