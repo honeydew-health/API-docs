@@ -354,6 +354,12 @@
             <a href="#employees" class="toc-h1 toc-link" data-title="Employees">Employees</a>
               <ul class="toc-list-h2">
                   <li>
+                    <a href="#get-an-employee" class="toc-h2 toc-link" data-title="Get an employee">Get an employee</a>
+                  </li>
+                  <li>
+                    <a href="#check-if-an-employee-exists" class="toc-h2 toc-link" data-title="Check if an employee exists">Check if an employee exists</a>
+                  </li>
+                  <li>
                     <a href="#create-an-employee" class="toc-h2 toc-link" data-title="Create an employee">Create an employee</a>
                   </li>
                   <li>
@@ -392,6 +398,9 @@
                   </li>
                   <li>
                     <a href="#get-a-department" class="toc-h2 toc-link" data-title="Get a department">Get a department</a>
+                  </li>
+                  <li>
+                    <a href="#check-if-a-department-exists" class="toc-h2 toc-link" data-title="Check if a department exists">Check if a department exists</a>
                   </li>
                   <li>
                     <a href="#create-a-department" class="toc-h2 toc-link" data-title="Create a department">Create a department</a>
@@ -624,7 +633,48 @@ You can view or generate a new API Key on your Engage account under Administrati
 </aside>
 
 <p>All requests will be validated against a defined list of IP addresses, you can configure these addresses on your Engage account under Administration &gt; Preferences &gt; Data API.</p>
-<h1 id='employees'>Employees</h1><h2 id='create-an-employee'>Create an employee</h2>
+<h1 id='employees'>Employees</h1><h2 id='get-an-employee'>Get an employee</h2>
+<p><code>GET /api/v1/employees/{employee_id}</code></p>
+<div class="highlight"><pre class="highlight plaintext"><code>curl -X GET /api/v1/employees/123 \
+  -H "Authorization: Bearer abc"
+</code></pre></div>
+<blockquote>
+<p>Example JSON Response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>{
+  "employee_id": "123",
+  "first_name": "Joe",
+  "surname": "Bloggs",
+  "date_of_birth": "1980-04-23",
+  "email": "joe.bloggs@example.com",
+  "job_title": "Administrative Assistant",
+  "department_name": "HR",
+  "start_date": "2023-08-01",
+  "end_date": "2023-08-30",
+  "first_manager_id": "456",
+  "employment_terms": "Standard",
+  "calendar_name": "Mon-Fri 8hr",
+  "custom_fields": {
+    "pay_group": "PG001",
+    "sick_pay_policy": "SSP",
+    "country": "Scotland",
+    "secondary_employee_id": "38475"
+  }
+}
+</code></pre></div><h2 id='check-if-an-employee-exists'>Check if an employee exists</h2>
+<p><code>GET /api/v1/employees/exists?employee_id={employee_id}</code></p>
+<div class="highlight"><pre class="highlight plaintext"><code>curl -X GET /api/v1/employees/exists?employee_id={employee_id} \
+  -H "Authorization: Bearer abc"
+</code></pre></div>
+<blockquote>
+<p>Example JSON Response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>{
+  exists: true
+}
+</code></pre></div>
+<p>Will return a value of true + HTTP 200 if employee exists, false + HTTP 404 if employee doesn&#39;t exist.</p>
+<h2 id='create-an-employee'>Create an employee</h2>
 <p><code>POST /api/v1/employees</code></p>
 <div class="highlight"><pre class="highlight plaintext"><code>curl -X POST /api/v1/employees \
   -H "Authorization: Bearer abc" \
@@ -1060,7 +1110,39 @@ You can view or generate a new API Key on your Engage account under Administrati
   "updated_at": "2023-08-01T14:15:59.000+01:00",
   "retired_at": null
 }
-</code></pre></div><h2 id='create-a-department'>Create a department</h2>
+</code></pre></div><h2 id='check-if-a-department-exists'>Check if a department exists</h2>
+<p><code>GET /api/v1/departments/exists</code></p>
+<div class="highlight"><pre class="highlight plaintext"><code>curl -X GET /api/v1/departments/exists?name={name} \
+  -H "Authorization: Bearer abc"
+</code></pre></div>
+<blockquote>
+<p>Example JSON Response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>{
+  exists: true
+}
+</code></pre></div><h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>external_id</td>
+<td>string</td>
+<td>Your id of the department.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>The name of the department.</td>
+</tr>
+</tbody></table>
+
+<p>Will return a value of true + HTTP 200 if department exists, false + HTTP 404 if department doesn&#39;t exist.</p>
+<h2 id='create-a-department'>Create a department</h2>
 <p><code>POST /api/v1/departments/</code></p>
 <div class="highlight"><pre class="highlight plaintext"><code>curl -X POST /api/v1/departments \
   -H "Authorization: Bearer abc" \
