@@ -79,6 +79,31 @@ curl -X GET /api/v1/departments/external_id/abc123 \
 }
 ```
 
+## Check if a department exists
+`GET /api/v1/departments/exists`
+
+```
+curl -X GET /api/v1/departments/exists?name={name} \
+  -H "Authorization: Bearer abc"
+```
+
+> Example JSON Response:
+
+```
+{
+  exists: true
+}
+```
+
+### Query Parameters
+
+Name | Type | Description
+--------- | ------- | -----------
+external_id | string | Your id of the department.
+name | string | The name of the department.
+
+Will return a value of true + HTTP 200 if department exists, false + HTTP 404 if department doesn't exist.
+
 ## Create a department
 `POST /api/v1/departments/`
 
