@@ -22,6 +22,8 @@ curl -X GET /api/v1/absences?start_date=2019-04-18 \
     "updated_at": "2019-04-18 18:01:57", 
     "absence_cause": "Flu",
     "absence_cause_category": "Infections",
+    "medical": true,
+    "term": "medium-term",
     "absence_cause_periods": [
       {
         "absence_cause_period_id": 77,
@@ -83,5 +85,10 @@ updated_at | date | Must be YYYY-MM-DD format. Matches equal to or greater than.
 </aside>
 
 <aside class="notice notice-info">
-  <code>absence_cause</code> and <code>absence_cause_category</code> only returned if privacy settings allow. See Administration > Preferences > Data API on your Engage Account.
+  <code>absence_cause</code> and <code>absence_cause_category</code> are conditionally returned based on two separate privacy settings:
+  <ul>
+    <li><strong>Include Medical Absence Causes</strong> - controls visibility when <code>medical</code> is <code>true</code></li>
+    <li><strong>Include Non-Medical Absence Causes</strong> - controls visibility when <code>medical</code> is <code>false</code></li>
+  </ul>
+  See Administration > Preferences > Data API on your Engage Account to configure these settings.
 </aside>
