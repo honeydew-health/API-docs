@@ -1406,6 +1406,8 @@ You can view or generate a new API Key on your Engage account under Administrati
     "updated_at": "2019-04-18 18:01:57", 
     "absence_cause": "Flu",
     "absence_cause_category": "Infections",
+    "medical": true,
+    "term": "medium-term",
     "absence_cause_periods": [
       {
         "absence_cause_period_id": 77,
@@ -1486,7 +1488,12 @@ You can view or generate a new API Key on your Engage account under Administrati
 </aside>
 
 <aside class="notice notice-info">
-  <code>absence_cause</code> and <code>absence_cause_category</code> only returned if privacy settings allow. See Administration > Preferences > Data API on your Engage Account.
+  <code>absence_cause</code> and <code>absence_cause_category</code> are conditionally returned based on two separate privacy settings:
+  <ul>
+    <li><strong>Include Medical Absence Causes</strong> - controls visibility when <code>medical</code> is <code>true</code></li>
+    <li><strong>Include Non-Medical Absence Causes</strong> - controls visibility when <code>medical</code> is <code>false</code></li>
+  </ul>
+  See Administration > Preferences > Data API on your Engage Account to configure these settings.
 </aside>
 <h1 id='errors'>Errors</h1>
 <p>The Engage API will return a HTTP 200 response code for all successful requests. You should check the response code to determine the success of each request.</p>
