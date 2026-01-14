@@ -90,5 +90,10 @@ updated_at | date | Must be YYYY-MM-DD format. Matches equal to or greater than.
     <li><strong>Include Medical Absence Causes</strong> - controls visibility when <code>medical</code> is <code>true</code></li>
     <li><strong>Include Non-Medical Absence Causes</strong> - controls visibility when <code>medical</code> is <code>false</code></li>
   </ul>
+
+  <code>medical_appointment_arranged</code> and <code>medical_appointment_date</code> are conditionally returned based on this privacy setting:
+  <ul>
+    <li><strong>Include Medical Appointments</strong> - controls visibility when <code>medical</code> is <code>true</code></li>
+  </ul>
   See Administration > Preferences > Data API on your Engage Account to configure these settings.
 </aside>
